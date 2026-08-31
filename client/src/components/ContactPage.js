@@ -239,7 +239,7 @@ const ContactPage = () => {
       <section className="faq-section">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
-          <a href="#" className="view-all">View All FAQs →</a>
+          <button type="button" className="view-all">View All FAQs →</button>
         </div>
         <div className="faq-grid">
           <div className="faq-column">

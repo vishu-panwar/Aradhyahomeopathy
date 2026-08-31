@@ -58,7 +58,7 @@ const Categories = () => {
               <div className="category-header">
                 <h3 className="category-title">{category.title}</h3>
                 <p className="category-description">{category.description}</p>
-                <a href="#" className="category-link">{category.link}</a>
+                <button type="button" className="category-link">{category.link}</button>
               </div>
               
               <div className="category-subcategories">
