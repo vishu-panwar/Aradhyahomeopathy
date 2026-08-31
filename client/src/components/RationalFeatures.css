@@ -1,0 +1,385 @@
+/* Rational Features Section */
+.rational-features {
+  padding: 1rem 2rem;
+  background: #e7ddc8;
+  position: relative;
+}
+
+.rational-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.rational-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: left;
+  margin: 0 0 2rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.rational-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 120px;
+  height: 4px;
+  background: #0d8066;
+}
+
+/* Products Flow Layout */
+.products-flow {
+  position: relative;
+  padding: 1rem 0;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Curved Arc for Products */
+.products-arc {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 5;
+  margin: 0 auto;
+}
+
+/* Rational Product Card Positioning in Perfect Arc */
+.rational-features .product-card {
+  position: absolute;
+  background: white;
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* Position 0 - Far Far Left */
+.rational-features .product-card.position-0 {
+  left: 0%;
+  top: 110px;
+  width: 140px;
+  height: 200px;
+  transform: rotate(-22deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+/* Position 1 - Far Left */
+.rational-features .product-card.position-1 {
+  left: 7%;
+  top: 65px;
+  width: 175px;
+  height: 255px;
+  transform: rotate(-16deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  opacity: 0.82;
+  z-index: 1;
+}
+
+/* Position 2 - Left */
+.rational-features .product-card.position-2 {
+  left: 19%;
+  top: 25px;
+  width: 210px;
+  height: 305px;
+  transform: rotate(-8deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Position 3 - Center (Largest) */
+.rational-features .product-card.position-3 {
+  left: 50%;
+  top: 0;
+  width: 270px;
+  height: 390px;
+  transform: translateX(-50%) rotate(0deg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.22);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* Position 4 - Right */
+.rational-features .product-card.position-4 {
+  right: 19%;
+  top: 25px;
+  width: 210px;
+  height: 305px;
+  transform: rotate(8deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Position 5 - Far Right */
+.rational-features .product-card.position-5 {
+  right: 7%;
+  top: 65px;
+  width: 175px;
+  height: 255px;
+  transform: rotate(16deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  opacity: 0.82;
+  z-index: 1;
+}
+
+/* Position 6 - Far Far Right */
+.rational-features .product-card.position-6 {
+  right: 0%;
+  top: 110px;
+  width: 140px;
+  height: 200px;
+  transform: rotate(22deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.rational-features .product-card.active {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image Container - Dynamic Heights */
+.rational-features .product-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+}
+
+.rational-features .product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none;
+}
+
+/* Curved Details Box */
+.details-curved-box {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  border: 3px solid #666;
+  border-radius: 50px 50px 20px 20px;
+  padding: 1.2rem 3rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.details-curved-box::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 3px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.detail-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.detail-value div {
+  margin: 0.3rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.details-curved-box {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .products-arc {
+    max-width: 950px;
+  }
+
+  .rational-features .product-card {
+    width: 160px;
+    height: 240px;
+  }
+
+  .rational-features .product-image-container {
+    height: 240px;
+  }
+}
+
+@media (max-width: 968px) {
+  .rational-title {
+    font-size: 2rem;
+  }
+
+  .products-flow {
+    padding: 0.5rem 0;
+    min-height: 500px;
+  }
+
+  .products-arc {
+    max-width: 750px;
+    height: 320px;
+  }
+
+  .rational-features .product-card {
+    width: 140px;
+    height: 210px;
+  }
+
+  .rational-features .product-image-container {
+    height: 210px;
+  }
+
+  .details-curved-box {
+    padding: 2rem;
+    border-radius: 40px 40px 15px 15px;
+  }
+
+  .detail-label {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rational-features {
+    padding: 1.2rem 0.5rem;
+  }
+
+  .rational-title {
+    font-size: 1.8rem;
+  }
+
+  .products-arc {
+    height: 280px;
+    max-width: 600px;
+  }
+
+  .rational-features .product-card {
+    width: 120px;
+    height: 180px;
+  }
+
+  .rational-features .product-image-container {
+    height: 180px;
+  }
+
+  .details-curved-box {
+    padding: 1.5rem;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .detail-label {
+    min-width: auto;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 480px) {
+  .rational-features {
+    padding: 2rem 0.25rem;
+  }
+
+  .rational-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .products-flow {
+    min-height: 450px;
+  }
+
+  .products-arc {
+    height: 240px;
+    max-width: 480px;
+  }
+
+  .rational-features .product-card {
+    width: 100px;
+    height: 150px;
+  }
+
+  .rational-features .product-image-container {
+    height: 150px;
+  }
+
+  .details-curved-box {
+    padding: 1.2rem;
+    border-radius: 30px 30px 12px 12px;
+  }
+
+  .detail-label {
+    font-size: 0.85rem;
+  }
+
+  .detail-value {
+    font-size: 0.85rem;
+  }
+}

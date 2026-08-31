@@ -1,0 +1,265 @@
+/* Categories Section */
+.categories-section {
+  padding: 1.5rem 4rem;
+  background: #e7ddc8;
+}
+
+.categories-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.categories-header {
+  margin-bottom: 2.5rem;
+}
+
+.categories-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.categories-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 140px;
+  height: 3px;
+  background: #0d8066;
+}
+
+/* Categories Grid */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Category Card */
+.category-card {
+  background: #ffffff;
+  border-radius: 0;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 184, 148, 0.15);
+}
+
+/* Category Header */
+.category-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.category-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.category-link {
+  font-size: 0.9rem;
+  color: #0d8066;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.category-link:hover {
+  color: #00a082;
+  gap: 0.6rem;
+}
+
+/* Subcategories */
+.category-subcategories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.subcategory-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.subcategory-item:hover {
+  transform: scale(1.05);
+}
+
+.subcategory-image {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 0.6rem;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subcategory-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.subcategory-item:hover .subcategory-image img {
+  transform: scale(1.1);
+}
+
+.subcategory-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.category-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.category-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.category-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.category-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .categories-section {
+    padding: 1.2rem 2rem;
+  }
+
+  .categories-title {
+    font-size: 2rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+  }
+
+  .subcategory-image {
+    height: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .categories-title {
+    font-size: 1.8rem;
+  }
+
+  .categories-title::after {
+    width: 120px;
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .category-card {
+    padding: 1.3rem;
+  }
+
+  .category-subcategories {
+    gap: 0.8rem;
+  }
+
+  .subcategory-image {
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .categories-title {
+    font-size: 1.6rem;
+  }
+
+  .categories-title::after {
+    width: 100px;
+  }
+
+  .category-card {
+    padding: 1.2rem;
+  }
+
+  .category-title {
+    font-size: 1.2rem;
+  }
+
+  .category-description {
+    font-size: 0.85rem;
+  }
+
+  .subcategory-image {
+    height: 90px;
+  }
+
+  .subcategory-name {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,368 @@
+/* Properties Section */
+.properties-section {
+  padding: 1rem 2rem;
+  background: #e7ddc8;
+  position: relative;
+}
+
+.properties-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.properties-content {
+  background: #ffffff;
+  padding: 1.2rem 3rem;
+  border-radius: 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Left Side */
+.properties-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.properties-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.properties-title-green {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0d8066;
+  line-height: 1.2;
+  margin: 0;
+  margin-top: -0.3rem;
+  letter-spacing: -0.5px;
+  text-shadow: 1px 1px 3px rgba(13, 128, 102, 0.15);
+}
+
+.properties-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.highlight-green {
+  color: #0d8066;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(13, 128, 102, 0.1);
+}
+
+.properties-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.btn-primary-green {
+  background: #0d8066;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(13, 128, 102, 0.35);
+  letter-spacing: 0.3px;
+}
+
+.btn-primary-green:hover {
+  background: #0b6b54;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(13, 128, 102, 0.45);
+}
+
+.btn-secondary-white {
+  background: white;
+  color: #333;
+  border: 2px solid #e0e0e0;
+  padding: 0.9rem 2rem;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.btn-secondary-white:hover {
+  background: #f8f9fa;
+  border-color: #0d8066;
+  color: #0d8066;
+  transform: translateY(-2px);
+}
+
+/* Right Side - Action Buttons */
+.properties-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.action-btn:hover {
+  border-color: #0d8066;
+  background: #f0fdf9;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.15);
+}
+
+.action-btn-green {
+  border-color: #0d8066;
+  background: #e8f8f5;
+  color: #0d8066;
+}
+
+.action-btn-green:hover {
+  background: #d1f2eb;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 184, 148, 0.25);
+}
+
+.btn-icon {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+}
+
+.btn-text {
+  flex: 1;
+  text-align: left;
+}
+
+/* Right Side - Image Cards - Horizontal Row */
+.properties-right {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2rem;
+}
+
+.image-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.image-card:hover {
+  border-color: #0d8066;
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 184, 148, 0.25);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover .product-image {
+  transform: scale(1.15);
+}
+
+/* Logo on Right Side */
+.properties-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Original Medical Symbol - Compact Size */
+.medical-symbol-image {
+  width: 100%;
+  max-width: 320px;
+  min-width: 200px;
+  height: auto;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(0, 184, 148, 0.15));
+}
+
+/* Old logo-image class - keeping for compatibility */
+.logo-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 20px rgba(0, 184, 148, 0.15));
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.properties-content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .properties-container {
+    gap: 1.5rem;
+  }
+
+  .properties-content {
+    padding: 2rem 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: 2rem;
+  }
+
+  .properties-buttons {
+    flex-wrap: wrap;
+  }
+
+  .logo-image {
+    max-width: 600px;
+  }
+
+  .medical-symbol-image {
+    max-width: 280px;
+    min-width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-section {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .properties-content {
+    padding: 2rem;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: 2rem;
+  }
+
+  .properties-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary-green,
+  .btn-secondary-white {
+    width: 100%;
+  }
+
+  .properties-description {
+    font-size: 0.95rem;
+  }
+
+  .properties-right {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .image-card {
+    width: 100px;
+    height: 100px;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .properties-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .properties-content {
+    padding: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: 1.6rem;
+  }
+
+  .properties-description {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary-green,
+  .btn-secondary-white {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .logo-image {
+    max-width: 450px;
+  }
+
+  .medical-symbol-image {
+    max-width: 220px;
+    min-width: 150px;
+  }
+}

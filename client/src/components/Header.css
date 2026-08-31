@@ -1,0 +1,163 @@
+/* Site Header */
+.site-header {
+  background: #e7ddc8;
+  padding: 0.2rem 0;
+  border-bottom: none;
+  box-shadow: 0 1px 0 rgba(28, 28, 28, 0.06);
+}
+
+.header-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+}
+
+/* Logo - Left Side, Larger */
+.brand-logo img {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+/* Navigation - Right Side */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.main-nav a {
+  color: #2d3748;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+  white-space: nowrap;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #0d8066;
+  transition: width 0.3s;
+}
+
+.main-nav a:hover {
+  color: #0d8066;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 170px;
+  padding: 0.85rem 1.4rem;
+  border-radius: 10px;
+  background: #0d8066;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(13, 128, 102, 0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  margin-left: 2rem;
+}
+
+.header-cta:hover {
+  background: #0a6b57;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(13, 128, 102, 0.22);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .main-nav {
+    gap: 2rem;
+  }
+
+  .main-nav a {
+    font-size: 0.95rem;
+  }
+
+  .header-cta {
+    min-width: 150px;
+    margin-left: 1.25rem;
+  }
+}
+
+@media (max-width: 968px) {
+  .header-wrapper {
+    padding: 0 2rem;
+  }
+
+  .brand-logo img {
+    height: 70px;
+  }
+
+  .main-nav {
+    gap: 1.5rem;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  .header-cta {
+    min-width: 140px;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .header-wrapper {
+    padding: 0 1.5rem;
+  }
+
+  .brand-logo img {
+    height: 60px;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .header-cta {
+    margin-left: auto;
+    min-width: 140px;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-wrapper {
+    padding: 0 1rem;
+  }
+
+  .brand-logo img {
+    height: 50px;
+  }
+
+  .header-cta {
+    min-width: 120px;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
