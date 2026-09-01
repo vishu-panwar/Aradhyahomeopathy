@@ -304,7 +304,11 @@
   }
 
   .testimonial-content {
-    padding: 1.5rem;
+    padding: 1.2rem 1rem 1rem;
+  }
+
+  .testimonial-header {
+    margin-bottom: 1.25rem;
   }
 
   .testimonial-title {
@@ -317,12 +321,35 @@
 
   .testimonial-text {
     min-height: 80px;
+    margin-bottom: 1rem;
+  }
+
+  .testimonial-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .author-info {
+    flex: 1;
+    min-width: 0;
   }
 
   .author-avatar {
     width: 45px;
     height: 45px;
     font-size: 1.6rem;
+  }
+
+  .testimonial-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 0.65rem;
+    margin-top: 0;
+    flex-shrink: 0;
   }
 
   .control-btn {

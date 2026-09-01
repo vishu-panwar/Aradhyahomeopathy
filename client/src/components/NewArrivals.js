@@ -52,6 +52,36 @@ const NewArrivals = () => {
       price: '₹849',
       image: '/product2.png',
       badge: 'NEW'
+    },
+    {
+      id: 6,
+      name: 'Digestive Care Drops',
+      category: 'Health Care',
+      subtitle: 'Popular',
+      rating: 5,
+      price: '₹699',
+      image: '/product3.png',
+      badge: 'NEW'
+    },
+    {
+      id: 7,
+      name: 'Gentle Baby Lotion',
+      category: 'Baby Care',
+      subtitle: 'Fresh',
+      rating: 5,
+      price: '₹799',
+      image: '/product1.png',
+      badge: 'NEW'
+    },
+    {
+      id: 8,
+      name: 'Holistic Stress Relief',
+      category: 'Wellness',
+      subtitle: 'New Launch',
+      rating: 5,
+      price: '₹1099',
+      image: '/product2.png',
+      badge: 'NEW'
     }
   ];
 
