@@ -14,7 +14,6 @@ const Footer = () => {
                 alt="Aradhya Homeopathy Logo" 
                 className="footer-logo-image"
               />
-              <span className="footer-logo-text">Aradhya Homeopathy</span>
             </div>
             <p className="footer-description">
               Your health, our priority. We deliver high-quality homeopathy medicines 

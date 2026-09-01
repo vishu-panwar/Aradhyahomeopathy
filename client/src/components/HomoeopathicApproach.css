@@ -277,35 +277,19 @@
     border-radius: 10px;
     margin: 0;
     box-shadow: none;
+    background: #ffffff;
+    color: #0d8066;
+  }
+
+  .approach-learn-btn:hover {
+    background: #f3f9f7;
+    color: #0d8066;
+    transform: none;
+    box-shadow: none;
   }
 
   .approach-doctor-section {
-    width: 100%;
-    max-width: 100%;
-    margin-top: 0.1rem;
-  }
-
-  .doctor-circle-outline {
-    width: 100%;
-    min-height: 360px;
-    padding: 0;
-  }
-
-  .circular-text {
-    width: min(116vw, 520px);
-    height: min(116vw, 520px);
-    top: 50%;
-  }
-
-  .circular-text-path {
-    font-size: 18px;
-    letter-spacing: 4.4px;
-    fill: #0d5d4a;
-  }
-
-  .doctor-image {
-    width: 52%;
-    max-height: 255px;
+    display: none;
   }
 }
 
@@ -331,24 +315,7 @@
   .approach-learn-btn {
     font-size: 0.98rem;
     padding: 0.95rem 1rem;
-  }
-
-  .doctor-circle-outline {
-    min-height: 310px;
-  }
-
-  .circular-text {
-    width: min(118vw, 420px);
-    height: min(118vw, 420px);
-  }
-
-  .circular-text-path {
-    font-size: 15px;
-    letter-spacing: 3.8px;
-  }
-
-  .doctor-image {
-    width: 56%;
-    max-height: 220px;
+    background: #ffffff;
+    color: #0d8066;
   }
 }
