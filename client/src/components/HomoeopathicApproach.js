@@ -24,8 +24,8 @@ const HomoeopathicApproach = () => {
                     d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"
                   />
                 </defs>
-                <text className="circular-text-path">
-                  <textPath href="#circlePath" startOffset="0%">
+                <text className="circular-text-path" textAnchor="middle">
+                  <textPath href="#circlePath" startOffset="50%">
                     ARADHYA.HOMEOPATHY.MEDICINES.
                   </textPath>
                 </text>

@@ -229,87 +229,126 @@
 
 @media (max-width: 768px) {
   .homoeopathic-approach {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem 0;
   }
 
   .approach-container {
+    display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: stretch;
+    gap: 0.75rem;
   }
 
   .approach-content {
-    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
   }
 
   .approach-title {
-    font-size: 2rem;
+    display: block;
+    font-size: 2.2rem;
+    line-height: 1.02;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.04em;
   }
 
   .approach-title::after {
-    width: 130px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 150px;
+    left: 0;
+    transform: none;
+    height: 3px;
+  }
+
+  .approach-description {
+    display: block;
+    margin: 0.8rem 0 1.2rem;
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+
+  .approach-learn-btn {
+    width: 100%;
+    display: block;
+    padding: 1.05rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 0;
+    box-shadow: none;
   }
 
   .approach-doctor-section {
-    max-width: 350px;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0.1rem;
   }
 
-  .doctor-image {
-    width: 70%;
-    max-height: 260px;
+  .doctor-circle-outline {
+    width: 100%;
+    min-height: 360px;
+    padding: 0;
   }
 
   .circular-text {
-    width: 350px;
-    height: 350px;
+    width: min(116vw, 520px);
+    height: min(116vw, 520px);
+    top: 50%;
   }
 
   .circular-text-path {
-    font-size: 15px;
-    letter-spacing: 4px;
+    font-size: 18px;
+    letter-spacing: 4.4px;
+    fill: #0d5d4a;
+  }
+
+  .doctor-image {
+    width: 52%;
+    max-height: 255px;
   }
 }
 
 @media (max-width: 480px) {
   .homoeopathic-approach {
-    padding: 1.5rem 1rem;
+    padding: 1rem 0.75rem 0;
+  }
+
+  .approach-container {
+    gap: 0.5rem;
   }
 
   .approach-title {
-    font-size: 1.8rem;
-  }
-
-  .approach-title::after {
-    width: 110px;
+    font-size: 2rem;
+    line-height: 1.04;
   }
 
   .approach-description {
     font-size: 0.9rem;
+    line-height: 1.55;
   }
 
   .approach-learn-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.9rem;
-    width: 100%;
+    font-size: 0.98rem;
+    padding: 0.95rem 1rem;
   }
 
-  .approach-doctor-section {
-    max-width: 280px;
-  }
-
-  .doctor-image {
-    width: 70%;
-    max-height: 220px;
+  .doctor-circle-outline {
+    min-height: 310px;
   }
 
   .circular-text {
-    width: 280px;
-    height: 280px;
+    width: min(118vw, 420px);
+    height: min(118vw, 420px);
   }
 
   .circular-text-path {
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 15px;
+    letter-spacing: 3.8px;
+  }
+
+  .doctor-image {
+    width: 56%;
+    max-height: 220px;
   }
 }
