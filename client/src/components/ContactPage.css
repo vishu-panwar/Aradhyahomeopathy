@@ -491,58 +491,188 @@
 @media (max-width: 768px) {
   .contact-page {
     padding-top: 60px;
+    overflow-x: hidden;
+  }
+
+  .contact-hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .contact-hero-container,
+  .contact-main-container,
+  .features-grid,
+  .faq-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .contact-hero-container,
+  .contact-main-container {
+    gap: 2.5rem;
   }
 
   .contact-hero-title {
     font-size: 2.2rem;
   }
 
+  .contact-hero-description {
+    font-size: 0.98rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
 
-  .contact-features,
+  .contact-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
   .features-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .form-actions {
     flex-direction: column;
   }
 
+  .action-btn {
+    width: 100%;
+  }
+
+  .contact-form-section {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .info-card {
+    padding: 1.1rem;
+    gap: 0.9rem;
+  }
+
   .cta-content-wrapper {
     flex-direction: column;
     text-align: center;
+    padding: 0 1.25rem;
   }
 
-  .bottom-cta-content {
+  .cta-image-wrap {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cta-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .cta-btn-book {
+    width: 100%;
+  }
+
+  .faq-header {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 
-  .cta-image-left {
-    max-width: 150px;
+  .faq-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
+  .contact-page {
+    padding-top: 52px;
+  }
+
   .contact-hero-container,
   .contact-main-container,
   .features-grid,
-  .faq-section,
-  .bottom-cta-content {
-    padding: 0 1.5rem;
+  .faq-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .contact-hero {
+    padding-top: 1.5rem;
   }
 
   .contact-hero-title {
     font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
   }
 
   .section-heading {
+    font-size: 1.55rem;
+  }
+
+  .section-subheading {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-feature p,
+  .feature-box p {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon-circle {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea,
+  .submit-button,
+  .action-btn,
+  .cta-btn-book {
+    font-size: 0.96rem;
+  }
+
+  .info-card {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .info-highlight {
+    font-size: 1rem;
+  }
+
+  .faq-header h2 {
     font-size: 1.6rem;
   }
 
-  .cta-text-center h2 {
-    font-size: 1.8rem;
+  .faq-item {
+    padding: 1rem;
+  }
+
+  .faq-item h4 {
+    font-size: 0.9rem;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .consultation-cta {
+    width: calc(100% - 1rem);
+    margin: 2rem auto;
+    padding: 1.5rem 0;
+    border-radius: 16px;
   }
 }
