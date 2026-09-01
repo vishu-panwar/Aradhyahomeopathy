@@ -73,14 +73,16 @@ const PropertiesSection = () => {
         <div className="properties-content">
           <div className="properties-left">
             <h2 className="properties-title">
-              Find Natural Healing
+              Complete Wellness
             </h2>
             <h2 className="properties-title-green">
-              With Homeopathy
+              Combo Pack
             </h2>
+            <p className="properties-subtitle">
+              Natural Care for You &amp; Your Family
+            </p>
             <p className="properties-description">
-              Connect with India's top-rated <span className="highlight-green">homeopathy experts</span>.<br />
-              Zero side effects. <span className="highlight-green">100% natural</span> medicines.
+              A complete homeopathic care solution for everyday health concerns. Made with <span className="highlight-green">100% natural ingredients</span> to support immunity, skin health, stress relief, digestion and overall well-being.
             </p>
             <div className="properties-buttons">
               <button className="btn-primary-green">

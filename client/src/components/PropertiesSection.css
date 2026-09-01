@@ -138,32 +138,40 @@
 }
 
 .properties-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  line-height: 1.2;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 900;
+  color: #171717;
+  line-height: 0.96;
   margin: 0;
-  letter-spacing: -0.5px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  letter-spacing: -0.06em;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
 }
 
 .properties-title-green {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 900;
   color: #0d8066;
-  line-height: 1.2;
+  line-height: 0.96;
   margin: 0;
-  margin-top: -0.3rem;
-  letter-spacing: -0.5px;
-  text-shadow: 1px 1px 3px rgba(13, 128, 102, 0.15);
+  letter-spacing: -0.06em;
+  text-shadow: 0 1px 0 rgba(13, 128, 102, 0.06);
+}
+
+.properties-subtitle {
+  margin: 0;
+  font-size: clamp(1.05rem, 1.4vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0d8066;
 }
 
 .properties-description {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.8;
-  margin: 0.5rem 0;
+  font-size: clamp(0.98rem, 1.6vw, 1.18rem);
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin: 0.2rem 0 0;
   font-weight: 500;
+  max-width: 660px;
 }
 
 .highlight-green {
@@ -382,7 +390,15 @@
 
   .properties-title,
   .properties-title-green {
-    font-size: 2rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+
+  .properties-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .properties-description {
+    font-size: 1rem;
   }
 
   .properties-buttons {
@@ -474,18 +490,24 @@
 
   .properties-title,
   .properties-title-green {
-    font-size: clamp(1.45rem, 6vw, 1.9rem);
-    line-height: 1.12;
+    font-size: clamp(2rem, 9vw, 2.6rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
     word-break: break-word;
   }
 
   .properties-title-green {
-    margin-top: -0.1rem;
+    margin-top: -0.08rem;
+  }
+
+  .properties-subtitle {
+    font-size: 1rem;
+    line-height: 1.4;
   }
 
   .properties-description {
-    font-size: 0.8rem;
-    line-height: 1.45;
+    font-size: 0.83rem;
+    line-height: 1.5;
     margin: 0.15rem 0;
   }
 
