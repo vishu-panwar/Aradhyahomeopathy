@@ -7,9 +7,10 @@ const categories = [
   { name: 'Hair Care', count: 10 },
   { name: 'Baby Care', count: 8 },
   { name: 'Health Care', count: 8 },
-  { name: 'Immunity Booster', count: 6 },
-  { name: 'Women Wellness', count: 6 },
+  { name: 'Immunity Care', count: 6 },
   { name: 'Digestive Care', count: 6 },
+  { name: 'Stress Relief', count: 6 },
+  { name: 'Joint Care', count: 5 },
   { name: 'Respiratory Care', count: 5 },
   { name: 'Pain Relief', count: 5 },
   { name: 'Mental Wellness', count: 4 },
@@ -23,23 +24,24 @@ const categories = [
 ];
 
 const products = [
-  { name: 'Skin Care', title: 'Natural solutions for healthy skin', count: 12, accent: 'green' },
-  { name: 'Hair Care', title: 'Strengthen, nourish and promote healthy hair.', count: 10, accent: 'gold' },
-  { name: 'Baby Care', title: 'Gentle and safe care for your little ones.', count: 8, accent: 'pink' },
-  { name: 'Health Care', title: 'Daily wellness and general health support.', count: 8, accent: 'blue' },
-  { name: 'Immunity Booster', title: 'Boost immunity and stay protected naturally.', count: 6, accent: 'green2' },
-  { name: 'Women Wellness', title: 'Care for every stage of a woman’s life.', count: 6, accent: 'purple' },
-  { name: 'Digestive Care', title: 'Improve digestion and gut health naturally.', count: 6, accent: 'teal' },
-  { name: 'Respiratory Care', title: 'Relief from cough, cold and breathing issues.', count: 5, accent: 'brown' },
-  { name: 'Pain Relief', title: 'Natural relief from pain and inflammation.', count: 5, accent: 'pink2' },
-  { name: 'Mental Wellness', title: 'Support for stress, anxiety and better sleep.', count: 4, accent: 'purple2' },
-  { name: 'Detox & Cleanse', title: 'Detoxify and rejuvenate your body naturally.', count: 4, accent: 'sage' },
-  { name: 'Heart Care', title: 'Support heart health and circulation.', count: 3, accent: 'amber' },
-  { name: 'Diabetes Care', title: 'Help manage blood sugar levels naturally.', count: 3, accent: 'mint' },
-  { name: 'Eye Care', title: 'Care for sharp and healthy vision.', count: 2, accent: 'teal2' },
-  { name: 'Thyroid Care', title: 'Support thyroid function naturally.', count: 2, accent: 'orange' },
-  { name: 'Men’s Health', title: 'Improve vitality, stamina and wellness.', count: 2, accent: 'navy' },
-  { name: 'Elderly Care', title: 'Gentle support for everyday vitality.', count: 2, accent: 'olive' }
+  { name: 'Skin Care', title: 'Natural solutions for healthy glowing skin', count: 12, images: [['Face Care', '/product1.png'], ['Body Care', '/product2.png']] },
+  { name: 'Hair Care', title: 'Strengthen & nourish your hair naturally', count: 10, images: [['Hair Oil', '/product3.png'], ['Hair Serum', '/product1.png']] },
+  { name: 'Baby Care', title: 'Gentle & safe products for your baby', count: 8, images: [['Baby Oil', '/product2.png'], ['Baby Cream', '/product3.png']] },
+  { name: 'Health Care', title: 'Complete wellness solutions for all ages', count: 8, images: [['Immunity', '/product1.png'], ['Digestion', '/product2.png']] },
+  { name: 'Immunity Care', title: 'Everyday support for stronger natural immunity', count: 6, images: [['Immunity Drops', '/product1.png'], ['Seasonal Care', '/product3.png']] },
+  { name: 'Digestive Care', title: 'Gentle remedies for comfortable digestion', count: 6, images: [['Digestive Drops', '/product3.png'], ['Acidity Care', '/product2.png']] },
+  { name: 'Stress Relief', title: 'Calm and balanced care for modern lifestyles', count: 6, images: [['Sleep Support', '/product2.png'], ['Calm Care', '/product1.png']] },
+  { name: 'Joint Care', title: 'Natural comfort for active everyday living', count: 5, images: [['Pain Relief', '/product3.png'], ['Mobility Care', '/product1.png']] },
+  { name: 'Respiratory Care', title: 'Relief from cough, cold and breathing issues', count: 5, images: [['Breathing Care', '/product2.png'], ['Seasonal Relief', '/product3.png']] },
+  { name: 'Pain Relief', title: 'Natural relief from pain and inflammation', count: 5, images: [['Pain Drops', '/product3.png'], ['Comfort Care', '/product1.png']] },
+  { name: 'Mental Wellness', title: 'Support for stress, anxiety and better sleep', count: 4, images: [['Calm Support', '/product2.png'], ['Sleep Care', '/product1.png']] },
+  { name: 'Detox & Cleanse', title: 'Detoxify and rejuvenate your body naturally', count: 4, images: [['Cleanse Care', '/product1.png'], ['Daily Detox', '/product3.png']] },
+  { name: 'Heart Care', title: 'Support heart health and circulation', count: 3, images: [['Heart Support', '/product1.png'], ['Circulation Care', '/product2.png']] },
+  { name: 'Diabetes Care', title: 'Help manage blood sugar levels naturally', count: 3, images: [['Sugar Care', '/product3.png'], ['Daily Support', '/product1.png']] },
+  { name: 'Eye Care', title: 'Care for sharp and healthy vision', count: 2, images: [['Eye Support', '/product2.png'], ['Vision Care', '/product1.png']] },
+  { name: 'Thyroid Care', title: 'Support thyroid function naturally', count: 2, images: [['Thyroid Support', '/product1.png'], ['Balance Care', '/product3.png']] },
+  { name: 'Men’s Health', title: 'Improve vitality, stamina and wellness', count: 2, images: [['Energy Care', '/product1.png'], ['Daily Wellness', '/product2.png']] },
+  { name: 'Elderly Care', title: 'Gentle support for everyday vitality', count: 2, images: [['Vitality Care', '/product2.png'], ['Gentle Care', '/product3.png']] }
 ];
 
 const CategoryPage = () => {
@@ -102,18 +104,26 @@ const CategoryPage = () => {
         <div className="category-content">
           <div className="category-header">
             <h2>All Categories</h2>
-            <span>Showing 1-16 of 16 categories</span>
+            <span>Showing 1-18 of 18 categories</span>
           </div>
 
           <div className="product-grid">
             {products.map((product, index) => (
-              <div className="product-card" key={`${product.name}-${index}`}>
-                <div className={`product-art ${product.accent}`}>
-                  <div className="art-cap" />
-                  <div className="art-bottle" />
+              <div className="category-home-card" key={`${product.name}-${index}`}>
+                <div className="category-home-card-header">
+                  <h3>{product.name}</h3>
+                  <p>{product.title}</p>
                 </div>
-                <h3>{product.name}</h3>
-                <p>{product.title}</p>
+                <div className="category-home-subcategories">
+                  {product.images.map(([name, image]) => (
+                    <div className="category-home-subcategory" key={name}>
+                      <div className="category-home-image">
+                        <img src={image} alt={name} />
+                      </div>
+                      <span>{name}</span>
+                    </div>
+                  ))}
+                </div>
                 <div className="card-more">
                   <span>{product.count} Products</span>
                   <button>→</button>

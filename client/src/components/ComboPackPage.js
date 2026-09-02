@@ -5,37 +5,37 @@ const productItems = [
   {
     name: 'Cough Syrup',
     size: '200 ml',
-    accent: 'green'
+    image: '/featured1.png'
   },
   {
     name: 'Digestive Drops',
     size: '30 ml',
-    accent: 'blue'
+    image: '/featured2.png'
   },
   {
     name: 'Immunity Booster',
     size: '60 Tablets',
-    accent: 'purple'
+    image: '/featured3.png'
   },
   {
     name: 'Skin Care Cream',
     size: '50 g',
-    accent: 'yellow'
+    image: '/featured1.png'
   },
   {
     name: 'Stress Relief Drops',
     size: '30 ml',
-    accent: 'pink'
+    image: '/featured2.png'
   },
   {
     name: 'Skin Care Cream',
     size: '25 g',
-    accent: 'teal'
+    image: '/featured3.png'
   },
   {
     name: 'Digestive Drops',
     size: '10 ml',
-    accent: 'orange'
+    image: '/featured1.png'
   }
 ];
 
@@ -119,21 +119,11 @@ const ComboPackPage = () => {
           </div>
 
           <div className="combo-right">
-            <div className="brand-badge">Complete<br />Family<br />Wellness</div>
-
-            <div className="showcase-box">
-              <div className="pack-hero">
-                <div className="hero-pack-title">Aradhya</div>
-                <div className="hero-pack-sub">Complete Wellness<br />Combo Pack</div>
-                <div className="hero-pack-small">Natural Care for You &amp; Your Family</div>
-              </div>
-
-              <div className="mini-bottle bottle-1"><span>Aradhya</span></div>
-              <div className="mini-bottle bottle-2"><span>Aradhya</span></div>
-              <div className="mini-bottle bottle-3"><span>Aradhya</span></div>
-              <div className="mini-bottle bottle-4"><span>Aradhya</span></div>
-              <div className="mini-bottle bottle-5"><span>Aradhya</span></div>
-            </div>
+            <img
+              src="/combo page .png"
+              alt="Complete Family Wellness Combo Pack"
+              className="combo-product-image"
+            />
           </div>
         </section>
 
@@ -147,9 +137,8 @@ const ComboPackPage = () => {
           <div className="product-grid">
             {productItems.map((item, index) => (
               <div className="pack-item" key={`${item.name}-${index}`}>
-                <div className={`mini-visual ${item.accent}`}>
-                  <div className="mini-cap" />
-                  <div className="mini-body" />
+                <div className="pack-image-wrap">
+                  <img src={item.image} alt={item.name} className="pack-item-image" />
                 </div>
                 <h3>{item.name}</h3>
                 <div className="pack-meta">

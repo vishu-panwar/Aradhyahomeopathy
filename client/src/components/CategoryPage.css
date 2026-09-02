@@ -45,7 +45,7 @@
 }
 
 .hero-badges span {
-  background: rgba(255,255,255,0.4);
+  background: #ffffff;
   border: 1px solid rgba(13,128,102,0.08);
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
@@ -161,7 +161,7 @@
 .pill-item {
   flex: 1;
   min-width: 180px;
-  background: rgba(255,255,255,0.4);
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,0.04);
   border-radius: 14px;
   padding: 0.95rem 1rem;
@@ -187,7 +187,7 @@
 
 .filter-card,
 .consult-card {
-  background: rgba(255,255,255,0.45);
+  background: #ffffff;
   border: 1px solid rgba(0,0,0,0.04);
   border-radius: 18px;
   padding: 1rem 1rem 1.1rem;
@@ -230,7 +230,7 @@
 }
 
 .consult-card {
-  background: linear-gradient(180deg, rgba(13,128,102,0.05), rgba(255,255,255,0.5));
+  background: #ffffff;
 }
 
 .consult-card p {
@@ -374,25 +374,135 @@
   cursor: pointer;
 }
 
+/* Homepage-style category cards */
+.category-home-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.category-home-card-header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+  gap: 0.75rem;
+  align-items: center;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.category-home-card-header h3 {
+  margin: 0;
+  color: #16242f;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.category-home-card-header p {
+  margin: 0;
+  color: #5e6d79;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.category-home-card-header button {
+  padding: 0.4rem 0.55rem;
+  border: 1px solid #8a8f91;
+  background: #ffffff;
+  color: #0d8066;
+  font-size: 0.78rem;
+  line-height: 1.05;
+  cursor: pointer;
+}
+
+.category-home-subcategories {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.1rem;
+}
+
+.category-home-subcategory {
+  min-width: 0;
+  text-align: center;
+}
+
+.category-home-image {
+  height: 120px;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.4rem;
+}
+
+.category-home-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-home-subcategory span {
+  display: block;
+  margin-top: 0.45rem;
+  color: #1f2b34;
+  font-size: 0.78rem;
+}
+
+.category-home-card .card-more {
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .category-home-card {
+    padding: 1rem;
+  }
+
+  .category-home-card-header {
+    grid-template-columns: 1fr auto;
+    gap: 0.45rem;
+  }
+
+  .category-home-card-header p {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .category-home-card-header button {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .category-home-card-header h3 {
+    font-size: 1.05rem;
+  }
+
+  .category-home-image {
+    height: 105px;
+  }
+}
+
 .consult-strip {
-  max-width: 1480px;
-  margin: 2.5rem auto 0;
-  padding: 0 2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(255,255,255,0.08));
-  border-radius: 18px;
-  border: 1px solid rgba(0,0,0,0.04);
+  max-width: 1600px;
+  margin: 1.5rem auto 0;
+  padding: 1rem 2rem;
+  background: #ffffff;
+  border-radius: 0;
+  border: none;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .calendar-icon {
   width: 64px;
   height: 64px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.32);
+  border-radius: 0;
+  background: #f5f5f5;
   display: grid;
   place-items: center;
   font-size: 2rem;
@@ -418,7 +528,7 @@
   background: #0d8066;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 0;
   padding: 0.95rem 1.2rem;
   font-weight: 700;
   cursor: pointer;

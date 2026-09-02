@@ -402,6 +402,24 @@
   transform: translateX(3px);
 }
 
+/* Match homepage product card colors. */
+.shop-main .product-card {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.shop-main .product-image-wrap {
+  background: #fafafa;
+  border: 0;
+}
+
+.shop-main .product-meta,
+.shop-main .product-price-row {
+  background: #ffffff;
+  border: 0;
+}
+
 @media (max-width: 1200px) {
   .product-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));

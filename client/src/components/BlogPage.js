@@ -8,7 +8,7 @@ const blogPosts = [
     excerpt: 'Understand the principles of homeopathy and how it helps the body heal naturally.',
     date: 'May 20, 2025',
     readTime: '5 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Homeopathy Basics'
   },
   {
@@ -17,7 +17,7 @@ const blogPosts = [
     excerpt: 'Simple and effective homeopathic ways to strengthen your immune system.',
     date: 'May 18, 2025',
     readTime: '4 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Health Tips'
   },
   {
@@ -26,7 +26,7 @@ const blogPosts = [
     excerpt: 'How homeopathy can provide long-term relief from seasonal allergies naturally.',
     date: 'May 15, 2025',
     readTime: '6 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Natural Remedies'
   },
   {
@@ -35,7 +35,7 @@ const blogPosts = [
     excerpt: 'Safe and natural homeopathic remedies to manage stress and improve well-being.',
     date: 'May 12, 2025',
     readTime: '5 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Lifestyle'
   },
   {
@@ -44,7 +44,7 @@ const blogPosts = [
     excerpt: 'Complete guide to Arnica 30 and its benefits for pain, inflammation and recovery.',
     date: 'May 10, 2025',
     readTime: '4 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Product Guide'
   },
   {
@@ -53,7 +53,7 @@ const blogPosts = [
     excerpt: 'Everything you need to know about homeopathy for kids and their growing health.',
     date: 'May 8, 2025',
     readTime: '5 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Homeopathy Basics'
   },
   {
@@ -62,7 +62,7 @@ const blogPosts = [
     excerpt: 'Effective and natural remedies to relieve cough, cold, and throat discomfort.',
     date: 'May 5, 2025',
     readTime: '6 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Natural Remedies'
   },
   {
@@ -71,7 +71,7 @@ const blogPosts = [
     excerpt: 'Homeopathic solutions to manage asthma and improve lung health naturally.',
     date: 'May 2, 2025',
     readTime: '5 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Health Tips'
   },
   {
@@ -80,7 +80,7 @@ const blogPosts = [
     excerpt: 'Uses, benefits and dosage guidance for Nux Vomica 30 in daily wellness.',
     date: 'Apr 30, 2025',
     readTime: '4 min read',
-    image: '/Screenshot 2026-08-20 225622.png',
+    image: '/blog image.png',
     tag: 'Product Guide'
   }
 ];
@@ -120,16 +120,8 @@ const BlogPage = () => {
             </div>
           </div>
 
-          <div className="blog-hero-visual" aria-hidden="true">
-            <div className="hero-bottle bottle-1" />
-            <div className="hero-bottle bottle-2" />
-            <div className="hero-bottle bottle-3" />
-            <div className="hero-jar" />
-            <div className="leaf leaf-1" />
-            <div className="leaf leaf-2" />
-            <div className="leaf leaf-3" />
-            <div className="leaf leaf-4" />
-            <div className="leaf leaf-5" />
+          <div className="blog-hero-visual">
+            <img src="/blog image.png" alt="Natural homeopathic medicines" />
           </div>
         </div>
       </section>
