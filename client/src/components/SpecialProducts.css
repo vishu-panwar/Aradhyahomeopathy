@@ -5,8 +5,15 @@
 }
 
 .special-container {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
+}
+
+@media (min-width: 769px) {
+  .special-products {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
 }
 
 /* Header */

@@ -42,6 +42,46 @@ const Categories = () => {
         { name: 'Digestion', image: '/product2.png' }
       ],
       link: 'Explore more →'
+    },
+    {
+      id: 5,
+      title: 'Immunity Care',
+      description: 'Everyday support for stronger natural immunity',
+      subcategories: [
+        { name: 'Immunity Drops', image: '/product1.png' },
+        { name: 'Seasonal Care', image: '/product3.png' }
+      ],
+      link: 'Explore more →'
+    },
+    {
+      id: 6,
+      title: 'Digestive Care',
+      description: 'Gentle remedies for comfortable digestion',
+      subcategories: [
+        { name: 'Digestive Drops', image: '/product3.png' },
+        { name: 'Acidity Care', image: '/product2.png' }
+      ],
+      link: 'Explore more →'
+    },
+    {
+      id: 7,
+      title: 'Stress Relief',
+      description: 'Calm and balanced care for modern lifestyles',
+      subcategories: [
+        { name: 'Sleep Support', image: '/product2.png' },
+        { name: 'Calm Care', image: '/product1.png' }
+      ],
+      link: 'Explore more →'
+    },
+    {
+      id: 8,
+      title: 'Joint Care',
+      description: 'Natural comfort for active everyday living',
+      subcategories: [
+        { name: 'Pain Relief', image: '/product3.png' },
+        { name: 'Mobility Care', image: '/product1.png' }
+      ],
+      link: 'Explore more →'
     }
   ];
 

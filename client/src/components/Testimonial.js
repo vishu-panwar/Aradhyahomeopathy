@@ -36,6 +36,54 @@ const Testimonial = () => {
       avatar: '👩‍⚕️',
       text: 'Amazing results with homeopathy treatment! I was skeptical at first, but the personalized care and quality medicines from Aradhya Homeopathy changed my perspective. Truly grateful for their support.',
       rating: 5
+    },
+    {
+      id: 5,
+      name: 'Vikram Mehta',
+      role: 'Customer',
+      avatar: '👨‍⚕️',
+      text: 'The consultation was detailed and the treatment felt truly personalized. My family has had a wonderful experience with Aradhya Homeopathy.',
+      rating: 5
+    },
+    {
+      id: 6,
+      name: 'Anita Verma',
+      role: 'Customer',
+      avatar: '👩‍🦱',
+      text: 'Excellent service and timely delivery. The natural medicines have helped me feel healthier and more confident in my everyday routine.',
+      rating: 5
+    },
+    {
+      id: 7,
+      name: 'Karan Singh',
+      role: 'Customer',
+      avatar: '👨‍💼',
+      text: 'Very happy with the guidance and follow-up care. The team listens carefully and recommends simple, natural treatment options.',
+      rating: 5
+    },
+    {
+      id: 8,
+      name: 'Meera Joshi',
+      role: 'Customer',
+      avatar: '👩',
+      text: 'Aradhya Homeopathy made ordering medicines easy for us. The quality and support have been consistently reliable.',
+      rating: 5
+    },
+    {
+      id: 9,
+      name: 'Rohit Agarwal',
+      role: 'Customer',
+      avatar: '👨',
+      text: 'The treatment plan was explained clearly and the results have been encouraging. I would gladly recommend their expert consultation.',
+      rating: 5
+    },
+    {
+      id: 10,
+      name: 'Pooja Shah',
+      role: 'Customer',
+      avatar: '👩‍⚕️',
+      text: 'A warm and professional experience from consultation to delivery. Natural care from Aradhya has become part of our family wellness.',
+      rating: 5
     }
   ];
 

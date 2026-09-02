@@ -5,48 +5,43 @@ const ProductShowcase = () => {
   const products = [
     {
       id: 1,
-      name: 'BP Care Medicine',
-      category: '30 Tablets',
-      subtitle: 'Effective Formula',
-      price: '₹750',
-      priceUnit: '/bottle',
-      image: '/product1.png'
+      name: 'Featured Skin Care',
+      image: '/featured1.png'
     },
     {
       id: 2,
-      name: 'Asthmaxx Relief',
-      category: '30 Capsules',
-      subtitle: 'Natural Formula',
-      price: '₹850',
-      priceUnit: '/pack',
-      image: '/product2.png'
+      name: 'Featured Baby Care',
+      image: '/featured2.png'
     },
     {
       id: 3,
-      name: 'Cervo Go Tablets',
-      category: 'Pain Relief',
-      subtitle: '30 Tablets',
-      price: '₹950',
-      priceUnit: '/bottle',
-      image: '/product3.png'
+      name: 'Featured Hair Care',
+      image: '/featured3.png'
     },
     {
       id: 4,
-      name: 'Immunity Booster',
-      category: 'Complete Wellness Pack',
-      subtitle: '',
-      price: '₹1,200',
-      priceUnit: '/pack',
-      image: '/product1.png'
+      name: 'Featured Skin Care 2',
+      image: '/featured1.png'
     },
     {
       id: 5,
-      name: 'Hair Care Solution',
-      category: 'Natural Growth Formula',
-      subtitle: '',
-      price: '₹650',
-      priceUnit: '/bottle',
-      image: '/product2.png'
+      name: 'Featured Baby Care 2',
+      image: '/featured2.png'
+    },
+    {
+      id: 6,
+      name: 'Featured Hair Care 2',
+      image: '/featured3.png'
+    },
+    {
+      id: 7,
+      name: 'Featured Skin Care 3',
+      image: '/featured1.png'
+    },
+    {
+      id: 8,
+      name: 'Featured Baby Care 3',
+      image: '/featured2.png'
     }
   ];
 
@@ -55,7 +50,7 @@ const ProductShowcase = () => {
       <div className="showcase-wrapper">
         <div className="showcase-header">
           <div>
-            <h2 className="showcase-title">Top Selling Products</h2>
+            <h2 className="showcase-title">Featured Products</h2>
           </div>
           <a href="#explore" className="showcase-link">
             Explore more →
@@ -71,21 +66,6 @@ const ProductShowcase = () => {
                   alt={product.name}
                   className="showcase-image"
                 />
-              </div>
-
-              <div className="showcase-content">
-                <h3 className="showcase-name">{product.name}</h3>
-                <p className="showcase-category">{product.category}</p>
-              </div>
-
-              <div className="showcase-footer">
-                <div className="showcase-pricing">
-                  <span className="showcase-price">{product.price}</span>
-                  <span className="showcase-price-unit">{product.priceUnit}</span>
-                </div>
-                <button className="showcase-details-btn">
-                  Details →
-                </button>
               </div>
             </div>
           ))}

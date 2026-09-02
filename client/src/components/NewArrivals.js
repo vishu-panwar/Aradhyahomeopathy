@@ -82,6 +82,26 @@ const NewArrivals = () => {
       price: '₹1099',
       image: '/product2.png',
       badge: 'NEW'
+    },
+    {
+      id: 9,
+      name: 'Digestive Wellness Drops',
+      category: 'Health Care',
+      subtitle: 'Fresh Arrival',
+      rating: 5,
+      price: '₹699',
+      image: '/product3.png',
+      badge: 'NEW'
+    },
+    {
+      id: 10,
+      name: 'Daily Immunity Support',
+      category: 'Wellness',
+      subtitle: 'New Launch',
+      rating: 5,
+      price: '₹999',
+      image: '/product1.png',
+      badge: 'NEW'
     }
   ];
 

@@ -42,6 +42,46 @@ const TopSellingProducts = () => {
       price: '₹650',
       image: '/product2.png',
       priceLabel: '/bottle'
+    },
+    {
+      id: 6,
+      title: 'Digestive Care Drops',
+      subtitle: 'Natural Comfort - 30 ml',
+      price: '₹699',
+      image: '/product3.png',
+      priceLabel: '/bottle'
+    },
+    {
+      id: 7,
+      title: 'Family Immunity Support',
+      subtitle: 'Daily Wellness - 30 Tablets',
+      price: '₹999',
+      image: '/product1.png',
+      priceLabel: '/pack'
+    },
+    {
+      id: 8,
+      title: 'Joint Comfort Formula',
+      subtitle: 'Natural Relief - 30 ml',
+      price: '₹899',
+      image: '/product3.png',
+      priceLabel: '/bottle'
+    },
+    {
+      id: 9,
+      title: 'Stress Relief Drops',
+      subtitle: 'Calm Care - 30 ml',
+      price: '₹799',
+      image: '/product2.png',
+      priceLabel: '/bottle'
+    },
+    {
+      id: 10,
+      title: 'Complete Wellness Pack',
+      subtitle: 'Everyday Care - Combo Pack',
+      price: '₹1200',
+      image: '/product1.png',
+      priceLabel: '/pack'
     }
   ];
 

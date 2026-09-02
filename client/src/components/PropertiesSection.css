@@ -341,16 +341,6 @@
   filter: drop-shadow(0 8px 20px rgba(0, 184, 148, 0.15));
 }
 
-/* Old logo-image class - keeping for compatibility */
-.logo-image {
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-  object-fit: contain;
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 8px 20px rgba(0, 184, 148, 0.15));
-}
-
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -557,5 +547,215 @@
     height: auto;
     min-width: 0;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-content {
+    min-height: 0;
+  }
+
+  .properties-logo {
+    margin-top: 0;
+  }
+
+  .properties-logo .medical-symbol-image {
+    width: 210px;
+    max-width: 210px;
+    min-width: 0;
+  }
+}
+
+/* Home hero */
+.properties-section {
+  padding: 0.85rem 2.8%;
+  background: #e7ddc8;
+}
+
+.properties-container {
+  max-width: 1600px;
+}
+
+.properties-content {
+  min-height: 410px;
+  padding: 2rem 4.3%;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  gap: 2rem;
+  border-radius: 0;
+  box-shadow: 0 2px 12px rgba(45, 38, 22, 0.08);
+}
+
+.properties-left {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.properties-title,
+.properties-title-green {
+  font-size: clamp(2.25rem, 3.1vw, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+}
+
+.properties-title-green {
+  margin-top: 0.7rem;
+}
+
+.properties-description {
+  margin-top: 1.3rem;
+  max-width: none;
+  color: #43505b;
+  font-size: clamp(0.95rem, 1.15vw, 1.15rem);
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.properties-description p {
+  margin: 0;
+}
+
+.properties-buttons {
+  gap: 1.4rem;
+  margin-top: 1.45rem;
+}
+
+.btn-primary-green,
+.btn-secondary-white {
+  min-width: 225px;
+  min-height: 52px;
+  padding: 0.7rem 1.4rem;
+  font-size: 1rem;
+}
+
+.properties-logo {
+  min-height: 100%;
+}
+
+.medical-symbol-image {
+  max-width: 350px;
+  min-width: 260px;
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .properties-content {
+    min-height: auto;
+    padding: 3rem 2.5rem;
+  }
+
+  .properties-description {
+    margin-top: 1.25rem;
+  }
+
+  .properties-buttons {
+    margin-top: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-section {
+    padding: 0.6rem;
+  }
+
+  .properties-content {
+    padding: 2.4rem 1.5rem 1.5rem;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: clamp(2.3rem, 10vw, 3.4rem);
+  }
+
+  .properties-title-green {
+    margin-top: 0.4rem;
+  }
+
+  .properties-description {
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .properties-buttons {
+    margin-top: 1.6rem;
+    width: 100%;
+  }
+
+  .btn-primary-green,
+  .btn-secondary-white {
+    min-width: 0;
+    min-height: 58px;
+    font-size: 1.05rem;
+  }
+
+  .properties-logo {
+    min-height: 0;
+  }
+
+  .medical-symbol-image {
+    max-width: 290px;
+  }
+}
+
+.promotion-banner {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  max-width: none;
+  margin: 0 auto 0.85rem;
+  transform: translateX(-50%);
+  overflow: hidden;
+  background: #fff;
+  line-height: 0;
+}
+
+.promotion-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.65s ease-in-out;
+}
+
+.promotion-track img {
+  display: block;
+  min-width: 100%;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 1;
+  object-fit: contain;
+}
+
+@media (min-width: 769px) {
+  .properties-section {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .properties-container {
+    max-width: 1600px;
+  }
+
+  .promotion-banner {
+    left: 0;
+    width: calc(100% + 5vw);
+    margin-left: -2.5vw;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .promotion-banner {
+    height: 125px;
+    margin-bottom: 0.6rem;
+  }
+
+  .promotion-track {
+    height: 100%;
+  }
+
+  .promotion-track img {
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
   }
 }

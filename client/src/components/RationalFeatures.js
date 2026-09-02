@@ -6,9 +6,9 @@ const RationalFeatures = () => {
 
   // Product images that will loop
   const productImages = [
-    '/Screenshot 2026-08-20 225449.png', // Skin Care
-    '/Screenshot 2026-08-20 225622.png', // Baby Care
-    '/Screenshot 2026-08-20 225727.png'  // Hair Care
+    '/featured1.png',
+    '/featured2.png',
+    '/featured3.png'
   ];
 
   const products = [
@@ -73,6 +73,33 @@ const RationalFeatures = () => {
       benefits: ['Glow Enhancement', 'Deep Nourishment', 'Age Defense'],
       date: '12 Jun 2026',
       color: '#e67e22',
+      image: productImages[0]
+    },
+    {
+      id: 8,
+      name: 'Digestive Wellness',
+      description: 'Gentle homeopathic support for comfortable digestion and daily wellness.',
+      benefits: ['Gentle Formula', 'Daily Comfort', 'Natural Support'],
+      date: '18 Jul 2026',
+      color: '#16a085',
+      image: productImages[1]
+    },
+    {
+      id: 9,
+      name: 'Joint Comfort Care',
+      description: 'Natural care to support comfortable movement and active everyday living.',
+      benefits: ['Mobility Support', 'Natural Care', 'Long-term Relief'],
+      date: '02 Aug 2026',
+      color: '#2980b9',
+      image: productImages[2]
+    },
+    {
+      id: 10,
+      name: 'Family Immunity Care',
+      description: 'Everyday homeopathic wellness support for the entire family.',
+      benefits: ['Family Friendly', 'Natural Ingredients', 'Easy to Use'],
+      date: '25 Aug 2026',
+      color: '#27ae60',
       image: productImages[0]
     }
   ];

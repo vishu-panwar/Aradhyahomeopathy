@@ -28,3 +28,183 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
+
+@media (min-width: 769px) {
+  .top-selling-section,
+  .new-arrivals,
+  .categories-section,
+  .special-products {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+  .top-selling-container,
+  .arrivals-container,
+  .categories-wrapper,
+  .special-container {
+    max-width: 1600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .App {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .properties-section {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .promotion-banner {
+    width: 100%;
+    margin: 0 0 0.6rem;
+  }
+
+  .properties-content {
+    min-height: 0;
+    padding: 1.25rem 1rem 0.9rem;
+    gap: 0.55rem;
+    grid-template-columns: 1fr;
+  }
+
+  .properties-left,
+  .properties-logo {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: clamp(2rem, 9vw, 2.8rem);
+  }
+
+  .properties-title-green {
+    margin-top: 0.2rem;
+  }
+
+  .properties-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-top: 0.8rem;
+  }
+
+  .properties-buttons {
+    gap: 0.65rem;
+    margin-top: 0.8rem;
+  }
+
+  .btn-primary-green,
+  .btn-secondary-white {
+    min-height: 48px;
+    padding: 0.65rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .properties-logo {
+    margin-top: 0;
+  }
+
+  .medical-symbol-image {
+    width: 210px;
+    max-width: 210px !important;
+  }
+
+  .top-selling-section,
+  .new-arrivals,
+  .product-showcase,
+  .categories-section,
+  .special-products {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .top-selling-container,
+  .arrivals-container,
+  .showcase-wrapper,
+  .categories-wrapper,
+  .special-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .section-header,
+  .arrivals-header,
+  .showcase-header,
+  .special-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .section-header h2,
+  .arrivals-title,
+  .showcase-title,
+  .special-title,
+  .categories-title {
+    font-size: 1.55rem;
+    margin-bottom: 0;
+  }
+
+  .explore-link,
+  .arrivals-link,
+  .showcase-link,
+  .special-link {
+    font-size: 0.75rem;
+    padding-top: 0;
+    white-space: nowrap;
+  }
+
+  .products-scroll-container,
+  .arrivals-grid,
+  .showcase-grid,
+  .special-grid {
+    display: flex;
+    gap: 0.75rem;
+    max-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.35rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .products-scroll-container::-webkit-scrollbar,
+  .arrivals-grid::-webkit-scrollbar,
+  .showcase-grid::-webkit-scrollbar,
+  .special-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .products-scroll-container .product-card,
+  .arrivals-grid .arrival-card,
+  .showcase-grid .showcase-card,
+  .special-grid .special-card {
+    display: flex !important;
+    min-width: 78%;
+    width: 78%;
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+  }
+
+  .top-selling-section .product-card {
+    height: auto;
+  }
+
+  .showcase-image-wrapper {
+    aspect-ratio: 0.804;
+  }
+
+  .categories-section {
+    padding-top: 1.25rem;
+  }
+
+  .categories-header {
+    margin-bottom: 1rem;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+}

@@ -62,6 +62,66 @@ const SpecialProducts = () => {
       discount: '37% OFF',
       image: '/product2.png',
       badge: 'SPECIAL'
+    },
+    {
+      id: 6,
+      name: 'Immunity Care Combo',
+      category: 'Special Offer',
+      location: 'Limited Edition',
+      rating: 5,
+      price: '₹1599',
+      originalPrice: '₹2399',
+      discount: '33% OFF',
+      image: '/product1.png',
+      badge: 'SPECIAL'
+    },
+    {
+      id: 7,
+      name: 'Digestive Comfort Pack',
+      category: 'Special Offer',
+      location: 'Limited Edition',
+      rating: 5,
+      price: '₹1199',
+      originalPrice: '₹1799',
+      discount: '33% OFF',
+      image: '/product3.png',
+      badge: 'SPECIAL'
+    },
+    {
+      id: 8,
+      name: 'Stress Relief Collection',
+      category: 'Special Offer',
+      location: 'Limited Edition',
+      rating: 5,
+      price: '₹1399',
+      originalPrice: '₹2199',
+      discount: '36% OFF',
+      image: '/product2.png',
+      badge: 'SPECIAL'
+    },
+    {
+      id: 9,
+      name: 'Joint Comfort Bundle',
+      category: 'Special Offer',
+      location: 'Limited Edition',
+      rating: 5,
+      price: '₹1699',
+      originalPrice: '₹2699',
+      discount: '37% OFF',
+      image: '/product3.png',
+      badge: 'SPECIAL'
+    },
+    {
+      id: 10,
+      name: 'Family Protection Pack',
+      category: 'Special Offer',
+      location: 'Limited Edition',
+      rating: 5,
+      price: '₹2299',
+      originalPrice: '₹3499',
+      discount: '34% OFF',
+      image: '/product1.png',
+      badge: 'SPECIAL'
     }
   ];
 
