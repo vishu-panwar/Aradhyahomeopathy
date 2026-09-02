@@ -1,11 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Aradhya",
+  "name": "Aradhya Homeopathy",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "ChatGPT_Image_Aug_20__2026__02_56_04_PM-removebg-preview.png",
+      "type": "image/png"
     },
     {
       "src": "logo192.png",
@@ -20,6 +19,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#e7ddc8",
   "background_color": "#ffffff"
 }
