@@ -4,6 +4,9 @@ import './PropertiesSection.css';
 const promotionalImages = [1, 2, 3, 4].map(
   (imageNumber) => `/Aradhya Homeopathy  Utsav bhai/${imageNumber}.png`
 );
+const mobilePromotionalImages = [2, 3, 4].map(
+  (imageNumber) => `/mobile banner image/image${imageNumber}.png`
+);
 
 const PropertiesSection = () => {
   const [activePromotion, setActivePromotion] = useState(0);
@@ -28,6 +31,18 @@ const PropertiesSection = () => {
               key={image}
               src={image}
               alt={`Aradhya Homeopathy promotion ${index + 1}`}
+            />
+          ))}
+        </div>
+        <div
+          className="promotion-track mobile-promotion-track"
+          style={{ transform: `translateX(-${(activePromotion % mobilePromotionalImages.length) * 100}%)` }}
+        >
+          {mobilePromotionalImages.map((image, index) => (
+            <img
+              key={image}
+              src={image}
+              alt={`Aradhya Homeopathy mobile promotion ${index + 1}`}
             />
           ))}
         </div>

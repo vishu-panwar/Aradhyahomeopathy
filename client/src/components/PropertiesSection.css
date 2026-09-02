@@ -715,6 +715,10 @@
   transition: transform 0.65s ease-in-out;
 }
 
+.mobile-promotion-track {
+  display: none;
+}
+
 .promotion-track img {
   display: block;
   min-width: 100%;
@@ -744,18 +748,25 @@
 
 @media (max-width: 768px) {
   .promotion-banner {
-    height: 125px;
+    height: auto;
+    aspect-ratio: 1.52;
     margin-bottom: 0.6rem;
   }
 
-  .promotion-track {
+  .promotion-banner > .promotion-track:first-child {
+    display: none;
+  }
+
+  .promotion-track.mobile-promotion-track {
+    display: flex;
     height: 100%;
   }
 
-  .promotion-track img {
+  .mobile-promotion-track img {
     height: 100%;
     aspect-ratio: auto;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
+    background: #ffffff;
   }
 }
