@@ -4,9 +4,12 @@ import './PropertiesSection.css';
 const promotionalImages = [1, 2, 3, 4].map(
   (imageNumber) => `/Aradhya Homeopathy  Utsav bhai/${imageNumber}.png`
 );
-const mobilePromotionalImages = [2, 3, 4].map(
-  (imageNumber) => `/mobile banner image/image${imageNumber}.png`
-);
+const mobilePromotionalImages = [
+  'Screenshot 2026-09-03 121949.png',
+  'Screenshot 2026-09-03 122021.png',
+  'Screenshot 2026-09-03 122041.png',
+  'Screenshot 2026-09-03 122110.png'
+].map((imageName) => `/mobile banner image/${imageName}`);
 
 const PropertiesSection = () => {
   const [activePromotion, setActivePromotion] = useState(0);

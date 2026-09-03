@@ -749,8 +749,9 @@
 @media (max-width: 768px) {
   .promotion-banner {
     height: auto;
-    aspect-ratio: 1.52;
+    aspect-ratio: auto;
     margin-bottom: 0.6rem;
+    background: transparent;
   }
 
   .promotion-banner > .promotion-track:first-child {
@@ -759,14 +760,55 @@
 
   .promotion-track.mobile-promotion-track {
     display: flex;
-    height: 100%;
+    height: auto;
   }
 
   .mobile-promotion-track img {
-    height: 100%;
+    height: auto;
     aspect-ratio: auto;
-    object-fit: contain;
+    object-fit: fill;
     object-position: center;
-    background: #ffffff;
+    background: transparent;
+  }
+}
+
+@media (max-width: 768px) {
+  .properties-content {
+    padding: 1rem 0.85rem 0.7rem;
+    gap: 0.35rem;
+  }
+
+  .properties-title,
+  .properties-title-green {
+    font-size: clamp(1.85rem, 8vw, 2.45rem);
+    line-height: 1.05;
+  }
+
+  .properties-title-green {
+    margin-top: 0.1rem;
+  }
+
+  .properties-description {
+    margin-top: 0.65rem;
+    margin-bottom: 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .properties-buttons {
+    gap: 0.5rem;
+    margin-top: 0.65rem;
+  }
+
+  .btn-primary-green,
+  .btn-secondary-white {
+    min-height: 43px;
+    padding: 0.55rem 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .properties-logo .medical-symbol-image {
+    width: 175px;
+    max-width: 175px;
   }
 }
