@@ -358,6 +358,12 @@
   justify-content: space-between;
 }
 
+/* Green variant for Top Selling and New Arrivals */
+.badge-special-strip.badge-green {
+  background: linear-gradient(135deg, #0a3a32 0%, #124d43 100%);
+  color: #ffffff;
+}
+
 .product-card-new.has-special-strip {
   padding-top: 30px;
 }

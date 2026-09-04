@@ -5,42 +5,42 @@ import '../styles/NewHomePage.css';
 const NewHomePage = () => {
   // Product data for different sections
   const topSellingProducts = [
-    { id: 'bp-care-medicine', name: 'BP Care Medicine', spec: '30 Tablets • Effective Formula', price: '₹750', label: '/bottle', color: 'red', text: 'B.P.\nCare' },
-    { id: 'asthmaxx-relief', name: 'Asthmaxx Relief', spec: '30 Capsules • Natural Formula', price: '₹850', label: '/pack', color: 'green', text: 'Astha\nmax' },
-    { id: 'cervo-go-tablets', name: 'Cervo Go Tablets', spec: 'Pain Relief • 30 Tablets', price: '₹950', label: '/bottle', color: 'blue', text: 'Cervo\nGo' },
-    { id: 'immunity-booster', name: 'Immunity Booster', spec: 'Complete Wellness Pack', price: '₹1,200', label: '/pack', color: 'red', text: 'Immune\nBoost' },
-    { id: 'hair-care-solution', name: 'Hair Care Solution', spec: 'Natural Growth Formula', price: '₹650', label: '/bottle', color: 'green', text: 'Hair\nCare' },
-    { id: 'digestive-care-drops', name: 'Digestive Care Drops', spec: 'Natural Comfort • 30 ml', price: '₹699', label: '/bottle', color: 'blue', text: 'Digesti\nCare' },
-    { id: 'family-immunity-support', name: 'Family Immunity Support', spec: 'Daily Wellness • 30 Tablets', price: '₹999', label: '/pack', color: 'red', text: 'Family\nShield' },
-    { id: 'joint-comfort-formula', name: 'Joint Comfort Formula', spec: 'Natural Relief • 30 ml', price: '₹899', label: '/bottle', color: 'blue', text: 'Joint\nComfort' },
-    { id: 'stress-relief-drops', name: 'Stress Relief Drops', spec: 'Calm Care • 30 ml', price: '₹799', label: '/bottle', color: 'green', text: 'Stress\nDrops' },
-    { id: 'complete-wellness-pack', name: 'Complete Wellness Pack', spec: 'Everyday Care • Combo Pack', price: '₹1,200', label: '/pack', color: 'red', text: 'Total\nCare' },
+    { id: 'bp-care-medicine', name: 'BP Care Medicine', spec: '30 Tablets • Effective Formula', price: '₹750', label: '/bottle', image: '/product1.png' },
+    { id: 'asthmaxx-relief', name: 'Asthmaxx Relief', spec: '30 Capsules • Natural Formula', price: '₹850', label: '/pack', image: '/product2.png' },
+    { id: 'cervo-go-tablets', name: 'Cervo Go Tablets', spec: 'Pain Relief • 30 Tablets', price: '₹950', label: '/bottle', image: '/product3.png' },
+    { id: 'immunity-booster', name: 'Immunity Booster', spec: 'Complete Wellness Pack', price: '₹1,200', label: '/pack', image: '/product1.png' },
+    { id: 'hair-care-solution', name: 'Hair Care Solution', spec: 'Natural Growth Formula', price: '₹650', label: '/bottle', image: '/product2.png' },
+    { id: 'digestive-care-drops', name: 'Digestive Care Drops', spec: 'Natural Comfort • 30 ml', price: '₹699', label: '/bottle', image: '/product3.png' },
+    { id: 'family-immunity-support', name: 'Family Immunity Support', spec: 'Daily Wellness • 30 Tablets', price: '₹999', label: '/pack', image: '/product1.png' },
+    { id: 'joint-comfort-formula', name: 'Joint Comfort Formula', spec: 'Natural Relief • 30 ml', price: '₹899', label: '/bottle', image: '/product2.png' },
+    { id: 'stress-relief-drops', name: 'Stress Relief Drops', spec: 'Calm Care • 30 ml', price: '₹799', label: '/bottle', image: '/product3.png' },
+    { id: 'complete-wellness-pack', name: 'Complete Wellness Pack', spec: 'Everyday Care • Combo Pack', price: '₹1,200', label: '/pack', image: '/product1.png' },
   ];
 
   const newArrivals = [
-    { id: 'advanced-skin-serum', name: 'Advanced Skin Serum', spec: 'Skin Care • New Launch', price: '₹899', color: 'green', text: 'Skin\nSerum' },
-    { id: 'kids-immunity-plus', name: 'Kids Immunity Plus', spec: 'Baby Care • Fresh Batch', price: '₹749', color: 'red', text: 'Kids\nPlus' },
-    { id: 'hair-growth-therapy', name: 'Hair Growth Therapy', spec: 'Hair Care • New Launch', price: '₹999', color: 'blue', text: 'Hair\nTherapy' },
-    { id: 'wellness-combo-pack', name: 'Wellness Combo Pack', spec: 'Wellness • New Launch', price: '₹1,299', color: 'red', text: 'Wellness\nCombo' },
-    { id: 'natural-glow-kit', name: 'Natural Glow Kit', spec: 'Beauty • New Launch', price: '₹849', color: 'green', text: 'Glow\nKit' },
-    { id: 'digestive-care-drops-2', name: 'Digestive Care Drops', spec: 'Health Care • Popular', price: '₹699', color: 'blue', text: 'Digesti\nDrops' },
-    { id: 'gentle-baby-lotion', name: 'Gentle Baby Lotion', spec: 'Baby Care • Fresh', price: '₹799', color: 'red', text: 'Baby\nLotion' },
-    { id: 'holistic-stress-relief', name: 'Holistic Stress Relief', spec: 'Wellness • New Launch', price: '₹1,099', color: 'green', text: 'Stress\nRelief' },
-    { id: 'digestive-wellness-drops', name: 'Digestive Wellness Drops', spec: 'Health Care • Fresh', price: '₹699', color: 'blue', text: 'Wellness\nDrops' },
-    { id: 'daily-immunity-support', name: 'Daily Immunity Support', spec: 'Wellness • New Launch', price: '₹999', color: 'red', text: 'Immune\nDaily' },
+    { id: 'advanced-skin-serum', name: 'Advanced Skin Serum', spec: 'Skin Care • New Launch', price: '₹899', image: '/product2.png' },
+    { id: 'kids-immunity-plus', name: 'Kids Immunity Plus', spec: 'Baby Care • Fresh Batch', price: '₹749', image: '/product3.png' },
+    { id: 'hair-growth-therapy', name: 'Hair Growth Therapy', spec: 'Hair Care • New Launch', price: '₹999', image: '/product1.png' },
+    { id: 'wellness-combo-pack', name: 'Wellness Combo Pack', spec: 'Wellness • New Launch', price: '₹1,299', image: '/product2.png' },
+    { id: 'natural-glow-kit', name: 'Natural Glow Kit', spec: 'Beauty • New Launch', price: '₹849', image: '/product3.png' },
+    { id: 'digestive-care-drops-2', name: 'Digestive Care Drops', spec: 'Health Care • Popular', price: '₹699', image: '/product1.png' },
+    { id: 'gentle-baby-lotion', name: 'Gentle Baby Lotion', spec: 'Baby Care • Fresh', price: '₹799', image: '/product2.png' },
+    { id: 'holistic-stress-relief', name: 'Holistic Stress Relief', spec: 'Wellness • New Launch', price: '₹1,099', image: '/product3.png' },
+    { id: 'digestive-wellness-drops', name: 'Digestive Wellness Drops', spec: 'Health Care • Fresh', price: '₹699', image: '/product1.png' },
+    { id: 'daily-immunity-support', name: 'Daily Immunity Support', spec: 'Wellness • New Launch', price: '₹999', image: '/product2.png' },
   ];
 
   const specialProducts = [
-    { name: 'Premium Skin Combo', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,499', price: '₹1,499', discount: '40% OFF', color: 'red', text: 'Skin\nCombo' },
-    { name: 'Baby Care Complete Kit', spec: 'Special Offer • Limited Edition', originalPrice: '₹1,999', price: '₹1,299', discount: '35% OFF', color: 'green', text: 'Baby\nKit' },
-    { name: 'Hair Revival Package', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,999', price: '₹1,799', discount: '40% OFF', color: 'blue', text: 'Hair\nPackage' },
-    { name: 'Family Wellness Bundle', spec: 'Special Offer • Limited Edition', originalPrice: '₹3,999', price: '₹2,499', discount: '38% OFF', color: 'red', text: 'Family\nBundle' },
-    { name: 'Complete Beauty Set', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,999', price: '₹1,899', discount: '37% OFF', color: 'green', text: 'Beauty\nSet' },
-    { name: 'Immunity Care Combo', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,399', price: '₹1,599', discount: '33% OFF', color: 'blue', text: 'Immune\nCombo' },
-    { name: 'Digestive Comfort Pack', spec: 'Special Offer • Limited Edition', originalPrice: '₹1,799', price: '₹1,199', discount: '33% OFF', color: 'red', text: 'Digest\nPack' },
-    { name: 'Stress Relief Collection', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,199', price: '₹1,399', discount: '36% OFF', color: 'green', text: 'Stress\nColl.' },
-    { name: 'Joint Comfort Bundle', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,699', price: '₹1,699', discount: '37% OFF', color: 'blue', text: 'Joint\nBundle' },
-    { name: 'Family Protection Pack', spec: 'Special Offer • Limited Edition', originalPrice: '₹3,499', price: '₹2,299', discount: '34% OFF', color: 'red', text: 'Family\nProt.' },
+    { name: 'Premium Skin Combo', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,499', price: '₹1,499', discount: '40% OFF', image: '/product3.png' },
+    { name: 'Baby Care Complete Kit', spec: 'Special Offer • Limited Edition', originalPrice: '₹1,999', price: '₹1,299', discount: '35% OFF', image: '/product1.png' },
+    { name: 'Hair Revival Package', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,999', price: '₹1,799', discount: '40% OFF', image: '/product2.png' },
+    { name: 'Family Wellness Bundle', spec: 'Special Offer • Limited Edition', originalPrice: '₹3,999', price: '₹2,499', discount: '38% OFF', image: '/product3.png' },
+    { name: 'Complete Beauty Set', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,999', price: '₹1,899', discount: '37% OFF', image: '/product1.png' },
+    { name: 'Immunity Care Combo', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,399', price: '₹1,599', discount: '33% OFF', image: '/product2.png' },
+    { name: 'Digestive Comfort Pack', spec: 'Special Offer • Limited Edition', originalPrice: '₹1,799', price: '₹1,199', discount: '33% OFF', image: '/product3.png' },
+    { name: 'Stress Relief Collection', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,199', price: '₹1,399', discount: '36% OFF', image: '/product1.png' },
+    { name: 'Joint Comfort Bundle', spec: 'Special Offer • Limited Edition', originalPrice: '₹2,699', price: '₹1,699', discount: '37% OFF', image: '/product2.png' },
+    { name: 'Family Protection Pack', spec: 'Special Offer • Limited Edition', originalPrice: '₹3,499', price: '₹2,299', discount: '34% OFF', image: '/product3.png' },
   ];
 
   const featuredProducts = [
@@ -108,7 +108,17 @@ const NewHomePage = () => {
             </div>
           </div>
           <div className="hero-art-frame">
-            <div className="caduceus-glow-orb">⚕️</div>
+            <div className="caduceus-glow-orb">
+              <img 
+                src="/homeopathy symbol .png" 
+                alt="Homeopathy Symbol"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain'
+                }}
+              />
+            </div>
             <div className="hero-stat-floating">
               <div className="stat-circle">★</div>
               <div>
@@ -131,11 +141,22 @@ const NewHomePage = () => {
         
         <div className="product-grid-5">
           {topSellingProducts.map((product, index) => (
-            <Link to={`/product/${product.id}`} key={index} className="product-card-new">
+            <Link to={`/product/${product.id}`} key={index} className="product-card-new has-special-strip">
+              <div className="badge-special-strip badge-green">
+                <span>BESTSELLER</span>
+                <span>TOP PICK</span>
+              </div>
               <div className="product-image-container-new">
-                <div className={`medicine-pack-art ${product.color}`}>
-                  {product.text}
-                </div>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    padding: '10px'
+                  }}
+                />
               </div>
               <div>
                 <h3 className="product-name-new">{product.name}</h3>
@@ -163,12 +184,22 @@ const NewHomePage = () => {
         
         <div className="product-grid-5">
           {newArrivals.map((product, index) => (
-            <Link to={`/product/${product.id}`} key={index} className="product-card-new">
-              <span className="badge-corner">NEW</span>
+            <Link to={`/product/${product.id}`} key={index} className="product-card-new has-special-strip">
+              <div className="badge-special-strip badge-green">
+                <span>NEW</span>
+                <span>FRESH</span>
+              </div>
               <div className="product-image-container-new">
-                <div className={`medicine-pack-art ${product.color}`}>
-                  {product.text}
-                </div>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    padding: '10px'
+                  }}
+                />
               </div>
               <div>
                 <h3 className="product-name-new">{product.name}</h3>
@@ -249,15 +280,22 @@ const NewHomePage = () => {
         
         <div className="product-grid-5">
           {specialProducts.map((product, index) => (
-            <Link to="/combo-pack" key={index} className="product-card-new has-special-strip">
-              <div className="badge-special-strip">
+            <Link to="/combo" key={index} className="product-card-new has-special-strip">
+              <div className="badge-special-strip badge-green">
                 <span>SPECIAL</span>
                 <span>{product.discount}</span>
               </div>
               <div className="product-image-container-new">
-                <div className={`medicine-pack-art ${product.color}`}>
-                  {product.text}
-                </div>
+                <img 
+                  src={product.image} 
+                  alt={product.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                    padding: '10px'
+                  }}
+                />
               </div>
               <div>
                 <h3 className="product-name-new">{product.name}</h3>
@@ -268,7 +306,7 @@ const NewHomePage = () => {
                   <span className="strike-price">{product.originalPrice}</span>
                   {product.price}
                 </div>
-                <button className="btn-grab-deal">Grab Deal &rarr;</button>
+                <button className="btn-product-action">Details &rarr;</button>
               </div>
             </Link>
           ))}

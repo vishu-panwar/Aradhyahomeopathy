@@ -14,30 +14,30 @@ const NewShopPage = () => {
 
   // Complete 24 Products Array
   const allProducts = [
-    { id: 1, name: 'Arnica Montana 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'ESSENTIAL', badgeColor: '', emoji: '🌼', color: '#d97706', label: 'Arnica', form: 'Drops', bestFor: 'Pain', desc: 'Trauma, Bruises & Muscle Soreness' },
-    { id: 2, name: 'Nux Vomica 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'POPULAR', badgeColor: 'badge-orange', emoji: '🌱', color: '#15803d', label: 'Nux Vom', form: 'Tablets', bestFor: 'Digestion', desc: 'Indigestion, Acidity & Constipation' },
-    { id: 3, name: 'BP Care Medicine', category: 'Health Care', price: 750, oldPrice: 900, badge: 'BEST FOR', badgeColor: '', emoji: '❤️', color: '#dc2626', label: 'BP Care', form: 'Tablets', bestFor: 'Pain', desc: 'Health Care • Natural Circulation' },
-    { id: 4, name: 'Asthmaxx Relief', category: 'Health Care', price: 850, oldPrice: 980, badge: 'CERTIFIED', badgeColor: 'badge-green', emoji: '🫁', color: '#059669', label: 'Asthamax', form: 'Tablets', bestFor: 'Immunity', desc: 'Respiratory Comfort & Allergy Relief' },
-    { id: 5, name: 'Cervo Go Tablets', category: 'Health Care', price: 950, oldPrice: 1100, badge: 'TOP RATED', badgeColor: '', emoji: '⚡', color: '#2563eb', label: 'Cervo Go', form: 'Tablets', bestFor: 'Pain', desc: 'Cervical & Neck Stiffness Relief' },
-    { id: 6, name: 'Berberis Aquifolium Q', category: 'Single Remedies', price: 210, oldPrice: 250, badge: 'GLOW CARE', badgeColor: 'badge-orange', emoji: '✨', color: '#ea580c', label: 'Berberis', form: 'Drops', bestFor: 'Skin', desc: 'Acne, Complexion & Clear Skin' },
-    { id: 7, name: 'Rhus Tox 200C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'ACUTE RELIEF', badgeColor: 'badge-blue', emoji: '🦴', color: '#0284c7', label: 'Rhus Tox', form: 'Drops', bestFor: 'Pain', desc: 'Joint Pain, Stiffness & Rain Aggravation' },
-    { id: 8, name: 'Hair Nourish Oil', category: 'Hair Care', price: 550, oldPrice: 680, badge: 'HERBAL', badgeColor: '', emoji: '🌿', color: '#047857', label: 'Hair Oil', form: 'Oil', bestFor: 'Hair', desc: 'Jaborandi & Arnica Hair Fall Control' },
-    { id: 9, name: 'Skin Care Cream', category: 'Skin Care', price: 450, oldPrice: 550, badge: 'POPULAR', badgeColor: 'badge-orange', emoji: '🧴', color: '#ea580c', label: 'Skin Cream', form: 'Cream', bestFor: 'Skin', desc: 'Calendula & Aloe Antiseptic Healing' },
-    { id: 10, name: 'Cold & Cough Syrup', category: 'Wellness', price: 350, oldPrice: 420, badge: 'SOOTHING', badgeColor: '', emoji: '🍯', color: '#2563eb', label: 'Cough', form: 'Syrup', bestFor: 'Immunity', desc: 'Non-Drowsy Chest & Throat Formula' },
-    { id: 11, name: 'Digestive Drops', category: 'Health Care', price: 299, oldPrice: 380, badge: 'DAILY USE', badgeColor: 'badge-orange', emoji: '🌱', color: '#16a34a', label: 'Digest', form: 'Drops', bestFor: 'Digestion', desc: 'Carbo Veg & China Flatulence Drops' },
-    { id: 12, name: 'Stress Relief Drops', category: 'Wellness', price: 299, oldPrice: 360, badge: 'CALM CARE', badgeColor: '', emoji: '🌙', color: '#9333ea', label: 'Calm', form: 'Drops', bestFor: 'Stress', desc: 'Passiflora & Avena Sativa Relaxation' },
-    { id: 13, name: 'Baby Care Drops', category: 'Baby Care', price: 320, oldPrice: 400, badge: 'GENTLE', badgeColor: 'badge-orange', emoji: '👶', color: '#0284c7', label: 'Baby', form: 'Drops', bestFor: 'Immunity', desc: 'Chamomilla Infant Teething & Colic' },
-    { id: 14, name: 'Thuja Occidentalis 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'WARTS & GROWTHS', badgeColor: '', emoji: '🌲', color: '#047857', label: 'Thuja', form: 'Drops', bestFor: 'Skin', desc: 'Skin Tags, Warts & Fungal Overgrowths' },
-    { id: 15, name: 'Hair Growth Therapy Serum', category: 'Hair Care', price: 999, oldPrice: 1299, badge: 'INTENSIVE', badgeColor: '', emoji: '💧', color: '#059669', label: 'Serum', form: 'Oil', bestFor: 'Hair', desc: 'Wiesbaden & Arnica Scalp Activation' },
-    { id: 16, name: 'Gentle Baby Lotion', category: 'Baby Care', price: 799, oldPrice: 950, badge: 'NEW LAUNCH', badgeColor: 'badge-orange', emoji: '🍼', color: '#f59e0b', label: 'Baby Lotion', form: 'Cream', bestFor: 'Skin', desc: 'Calendula Natural Barrier Cream' },
-    { id: 17, name: 'Withania Somnifera (Ashwagandha) Q', category: 'Single Remedies', price: 220, oldPrice: 270, badge: 'PURE TINCTURE', badgeColor: 'badge-green', emoji: '🪵', color: '#b45309', label: 'Ashwagandha', form: 'Drops', bestFor: 'Stress', desc: 'Nerve Weakness, Stamina & Deep Rest' },
-    { id: 18, name: 'Women Wellness Tablets', category: 'Wellness', price: 399, oldPrice: 480, badge: 'BALANCED', badgeColor: 'badge-orange', emoji: '🌸', color: '#db2777', label: 'Women', form: 'Tablets', bestFor: 'Stress', desc: 'Sepia & Pulsatilla Hormonal Balance' },
-    { id: 19, name: 'Advanced Skin Serum', category: 'Skin Care', price: 899, oldPrice: 1150, badge: 'CLINICAL', badgeColor: '', emoji: '💎', color: '#065f46', label: 'Serum', form: 'Drops', bestFor: 'Skin', desc: 'Hyaluronic & Homeopathic Botanical Blend' },
-    { id: 20, name: 'Allium Cepa 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'COLD & SNEEZING', badgeColor: 'badge-blue', emoji: '🧅', color: '#0284c7', label: 'Allium', form: 'Drops', bestFor: 'Immunity', desc: 'Watery Eyes, Runny Nose & Sneezing' },
-    { id: 21, name: 'Premium Skin Combo', category: 'Combo Packs', price: 1499, oldPrice: 2499, badge: 'SAVE 40%', badgeColor: 'badge-orange', emoji: '📦', color: '#dc2626', label: 'Skin Kit', form: 'Combo', bestFor: 'Skin', desc: 'Cream + Serum + Berberis Drops' },
-    { id: 22, name: 'Family Wellness Pack', category: 'Combo Packs', price: 1299, oldPrice: 1999, badge: 'SAVE 38%', badgeColor: 'badge-orange', emoji: '👨‍👩‍👧', color: '#2563eb', label: 'Family', form: 'Combo', bestFor: 'Immunity', desc: 'Immunity + Cough + Digestion Starter' },
-    { id: 23, name: 'Hair Revival Package', category: 'Combo Packs', price: 1799, oldPrice: 2999, badge: 'SAVE 40%', badgeColor: 'badge-orange', emoji: '💆', color: '#059669', label: 'Hair Kit', form: 'Combo', bestFor: 'Hair', desc: 'Hair Oil + Serum + Wiesbaden 30' },
-    { id: 24, name: 'Complete Wellness Combo Pack', category: 'Combo Packs', price: 2499, oldPrice: 3499, badge: 'BEST VALUE', badgeColor: 'badge-orange', emoji: '🏆', color: '#d97706', label: 'All-in-1', form: 'Combo', bestFor: 'Immunity', desc: '7 Full Size Remedies in Family Casket' }
+    { id: 1, name: 'Arnica Montana 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'ESSENTIAL', badgeColor: '', image: '/product1.png', form: 'Drops', bestFor: 'Pain', desc: 'Trauma, Bruises & Muscle Soreness' },
+    { id: 2, name: 'Nux Vomica 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'POPULAR', badgeColor: 'badge-orange', image: '/product2.png', form: 'Tablets', bestFor: 'Digestion', desc: 'Indigestion, Acidity & Constipation' },
+    { id: 3, name: 'BP Care Medicine', category: 'Health Care', price: 750, oldPrice: 900, badge: 'BEST FOR', badgeColor: '', image: '/product3.png', form: 'Tablets', bestFor: 'Pain', desc: 'Health Care • Natural Circulation' },
+    { id: 4, name: 'Asthmaxx Relief', category: 'Health Care', price: 850, oldPrice: 980, badge: 'CERTIFIED', badgeColor: 'badge-green', image: '/product1.png', form: 'Tablets', bestFor: 'Immunity', desc: 'Respiratory Comfort & Allergy Relief' },
+    { id: 5, name: 'Cervo Go Tablets', category: 'Health Care', price: 950, oldPrice: 1100, badge: 'TOP RATED', badgeColor: '', image: '/product2.png', form: 'Tablets', bestFor: 'Pain', desc: 'Cervical & Neck Stiffness Relief' },
+    { id: 6, name: 'Berberis Aquifolium Q', category: 'Single Remedies', price: 210, oldPrice: 250, badge: 'GLOW CARE', badgeColor: 'badge-orange', image: '/product3.png', form: 'Drops', bestFor: 'Skin', desc: 'Acne, Complexion & Clear Skin' },
+    { id: 7, name: 'Rhus Tox 200C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'ACUTE RELIEF', badgeColor: 'badge-blue', image: '/product1.png', form: 'Drops', bestFor: 'Pain', desc: 'Joint Pain, Stiffness & Rain Aggravation' },
+    { id: 8, name: 'Hair Nourish Oil', category: 'Hair Care', price: 550, oldPrice: 680, badge: 'HERBAL', badgeColor: '', image: '/product2.png', form: 'Oil', bestFor: 'Hair', desc: 'Jaborandi & Arnica Hair Fall Control' },
+    { id: 9, name: 'Skin Care Cream', category: 'Skin Care', price: 450, oldPrice: 550, badge: 'POPULAR', badgeColor: 'badge-orange', image: '/product3.png', form: 'Cream', bestFor: 'Skin', desc: 'Calendula & Aloe Antiseptic Healing' },
+    { id: 10, name: 'Cold & Cough Syrup', category: 'Wellness', price: 350, oldPrice: 420, badge: 'SOOTHING', badgeColor: '', image: '/product1.png', form: 'Syrup', bestFor: 'Immunity', desc: 'Non-Drowsy Chest & Throat Formula' },
+    { id: 11, name: 'Digestive Drops', category: 'Health Care', price: 299, oldPrice: 380, badge: 'DAILY USE', badgeColor: 'badge-orange', image: '/product2.png', form: 'Drops', bestFor: 'Digestion', desc: 'Carbo Veg & China Flatulence Drops' },
+    { id: 12, name: 'Stress Relief Drops', category: 'Wellness', price: 299, oldPrice: 360, badge: 'CALM CARE', badgeColor: '', image: '/product3.png', form: 'Drops', bestFor: 'Stress', desc: 'Passiflora & Avena Sativa Relaxation' },
+    { id: 13, name: 'Baby Care Drops', category: 'Baby Care', price: 320, oldPrice: 400, badge: 'GENTLE', badgeColor: 'badge-orange', image: '/product1.png', form: 'Drops', bestFor: 'Immunity', desc: 'Chamomilla Infant Teething & Colic' },
+    { id: 14, name: 'Thuja Occidentalis 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'WARTS & GROWTHS', badgeColor: '', image: '/product2.png', form: 'Drops', bestFor: 'Skin', desc: 'Skin Tags, Warts & Fungal Overgrowths' },
+    { id: 15, name: 'Hair Growth Therapy Serum', category: 'Hair Care', price: 999, oldPrice: 1299, badge: 'INTENSIVE', badgeColor: '', image: '/product3.png', form: 'Oil', bestFor: 'Hair', desc: 'Wiesbaden & Arnica Scalp Activation' },
+    { id: 16, name: 'Gentle Baby Lotion', category: 'Baby Care', price: 799, oldPrice: 950, badge: 'NEW LAUNCH', badgeColor: 'badge-orange', image: '/product1.png', form: 'Cream', bestFor: 'Skin', desc: 'Calendula Natural Barrier Cream' },
+    { id: 17, name: 'Withania Somnifera (Ashwagandha) Q', category: 'Single Remedies', price: 220, oldPrice: 270, badge: 'PURE TINCTURE', badgeColor: 'badge-green', image: '/product2.png', form: 'Drops', bestFor: 'Stress', desc: 'Nerve Weakness, Stamina & Deep Rest' },
+    { id: 18, name: 'Women Wellness Tablets', category: 'Wellness', price: 399, oldPrice: 480, badge: 'BALANCED', badgeColor: 'badge-orange', image: '/product3.png', form: 'Tablets', bestFor: 'Stress', desc: 'Sepia & Pulsatilla Hormonal Balance' },
+    { id: 19, name: 'Advanced Skin Serum', category: 'Skin Care', price: 899, oldPrice: 1150, badge: 'CLINICAL', badgeColor: '', image: '/product1.png', form: 'Drops', bestFor: 'Skin', desc: 'Hyaluronic & Homeopathic Botanical Blend' },
+    { id: 20, name: 'Allium Cepa 30C', category: 'Single Remedies', price: 145, oldPrice: 180, badge: 'COLD & SNEEZING', badgeColor: 'badge-blue', image: '/product2.png', form: 'Drops', bestFor: 'Immunity', desc: 'Watery Eyes, Runny Nose & Sneezing' },
+    { id: 21, name: 'Premium Skin Combo', category: 'Combo Packs', price: 1499, oldPrice: 2499, badge: 'SAVE 40%', badgeColor: 'badge-orange', image: '/product3.png', form: 'Combo', bestFor: 'Skin', desc: 'Cream + Serum + Berberis Drops' },
+    { id: 22, name: 'Family Wellness Pack', category: 'Combo Packs', price: 1299, oldPrice: 1999, badge: 'SAVE 38%', badgeColor: 'badge-orange', image: '/product1.png', form: 'Combo', bestFor: 'Immunity', desc: 'Immunity + Cough + Digestion Starter' },
+    { id: 23, name: 'Hair Revival Package', category: 'Combo Packs', price: 1799, oldPrice: 2999, badge: 'SAVE 40%', badgeColor: 'badge-orange', image: '/product2.png', form: 'Combo', bestFor: 'Hair', desc: 'Hair Oil + Serum + Wiesbaden 30' },
+    { id: 24, name: 'Complete Wellness Combo Pack', category: 'Combo Packs', price: 2499, oldPrice: 3499, badge: 'BEST VALUE', badgeColor: 'badge-orange', image: '/product3.png', form: 'Combo', bestFor: 'Immunity', desc: '7 Full Size Remedies in Family Casket' }
   ];
 
   const categories = [
@@ -397,10 +397,16 @@ const NewShopPage = () => {
                 <div key={product.id} className="shop-product-card">
                   <span className={`product-badge ${product.badgeColor}`}>{product.badge}</span>
                   <div className="card-img-box">
-                    <div className="med-mock-bottle" style={{ borderTop: `4px solid ${product.color}` }}>
-                      <span className="mock-top">{product.emoji}</span>
-                      <span className="mock-title">{product.label}</span>
-                    </div>
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'contain',
+                        padding: '10px'
+                      }}
+                    />
                   </div>
                   <div>
                     <h4 className="card-product-name">
