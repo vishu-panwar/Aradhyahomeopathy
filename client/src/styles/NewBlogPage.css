@@ -632,3 +632,19 @@
     padding: 8px 16px;
   }
 }
+
+/* Fix for pagination buttons */
+.page-btn {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Fix for popular title as span */
+.popular-title {
+  cursor: default;
+}
+
+/* Fix for category link as span */
+.cat-dir-link {
+  cursor: default;
+}

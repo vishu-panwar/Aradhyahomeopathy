@@ -240,15 +240,15 @@ const NewAboutPage = () => {
               <div className="expert-designation">{expert.designation}</div>
               <p className="expert-bio">{expert.bio}</p>
               <div className="expert-social-links">
-                <a href="#" className="expert-social-btn">
+                <button type="button" className="expert-social-btn">
                   f
-                </a>
-                <a href="#" className="expert-social-btn">
+                </button>
+                <button type="button" className="expert-social-btn">
                   in
-                </a>
-                <a href="#" className="expert-social-btn">
+                </button>
+                <button type="button" className="expert-social-btn">
                   🌐
-                </a>
+                </button>
               </div>
             </div>
           ))}

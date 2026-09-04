@@ -680,3 +680,9 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Fix for social buttons */
+.expert-social-btn {
+  cursor: pointer;
+  font-family: inherit;
+}

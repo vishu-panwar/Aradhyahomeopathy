@@ -216,11 +216,11 @@ const NewBlogPage = () => {
 
             {/* Pagination Controls */}
             <div className="pagination-row">
-              <a href="#" className="page-btn active">1</a>
-              <a href="#" className="page-btn">2</a>
-              <a href="#" className="page-btn">3</a>
-              <a href="#" className="page-btn">4</a>
-              <a href="#" className="page-btn">›</a>
+              <button type="button" className="page-btn active">1</button>
+              <button type="button" className="page-btn">2</button>
+              <button type="button" className="page-btn">3</button>
+              <button type="button" className="page-btn">4</button>
+              <button type="button" className="page-btn">›</button>
             </div>
           </div>
 
@@ -242,7 +242,7 @@ const NewBlogPage = () => {
                 {popularArticles.map((title, index) => (
                   <li key={index} className="popular-item">
                     <span className="popular-rank">{String(index + 1).padStart(2, '0')}</span>
-                    <a href="#" className="popular-title">{title}</a>
+                    <span className="popular-title">{title}</span>
                   </li>
                 ))}
               </ul>
@@ -253,23 +253,23 @@ const NewBlogPage = () => {
               <h3 className="sidebar-heading">Categories</h3>
               <ul className="category-dir-list">
                 <li className="category-dir-item">
-                  <a href="#" className="cat-dir-link">Homeopathy Basics</a>
+                  <span className="cat-dir-link">Homeopathy Basics</span>
                   <span className="cat-dir-count">24</span>
                 </li>
                 <li className="category-dir-item">
-                  <a href="#" className="cat-dir-link">Natural Remedies</a>
+                  <span className="cat-dir-link">Natural Remedies</span>
                   <span className="cat-dir-count">6</span>
                 </li>
                 <li className="category-dir-item">
-                  <a href="#" className="cat-dir-link">Health Tips</a>
+                  <span className="cat-dir-link">Health Tips</span>
                   <span className="cat-dir-count">5</span>
                 </li>
                 <li className="category-dir-item">
-                  <a href="#" className="cat-dir-link">Lifestyle</a>
+                  <span className="cat-dir-link">Lifestyle</span>
                   <span className="cat-dir-count">4</span>
                 </li>
                 <li className="category-dir-item">
-                  <a href="#" className="cat-dir-link">Product Guide</a>
+                  <span className="cat-dir-link">Product Guide</span>
                   <span className="cat-dir-count">4</span>
                 </li>
               </ul>
