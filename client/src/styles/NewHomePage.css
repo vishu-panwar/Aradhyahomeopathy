@@ -115,7 +115,7 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-columns: 1fr 1.5fr;
   align-items: center;
   gap: 50px;
 }
@@ -207,6 +207,11 @@
 .hero-art-frame {
   position: relative;
   text-align: center;
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .caduceus-glow-orb {
@@ -768,10 +773,11 @@
 }
 
 .testimonial-body {
-  padding: 55px 45px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 280px;
 }
 
 .quote-icon {
@@ -846,7 +852,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 20px;
+  min-height: 280px;
+  max-height: 320px;
 }
 
 .mortar-medallion {

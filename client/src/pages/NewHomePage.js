@@ -63,11 +63,6 @@ const NewHomePage = () => {
 
   return (
     <div className="new-homepage">
-      {/* Top Ticker */}
-      <div className="top-ticker">
-        🌿 Certified Classical Pharmacopeia Formulations &bull; <span>Free Clinical Consultation on Orders Above ₹499</span>
-      </div>
-
       {/* Seasonal Festivity Ribbon */}
       <section className="seasonal-ribbon">
         <div className="seasonal-inner">
@@ -108,24 +103,17 @@ const NewHomePage = () => {
             </div>
           </div>
           <div className="hero-art-frame">
-            <div className="caduceus-glow-orb">
-              <img 
-                src="/homeopathy symbol .png" 
-                alt="Homeopathy Symbol"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain'
-                }}
-              />
-            </div>
-            <div className="hero-stat-floating">
-              <div className="stat-circle">★</div>
-              <div>
-                <div style={{ fontSize: '13.5px', fontWeight: 800, color: 'var(--primary-dark)' }}>4.9 / 5.0 Rating</div>
-                <div style={{ fontSize: '11px', color: 'var(--text-muted)' }}>25,000+ Verified Patient Consultations</div>
-              </div>
-            </div>
+            <img 
+              src="/hero image.png" 
+              alt="Aradhya Homeopathy"
+              style={{
+                width: '100%',
+                height: '100%',
+                maxWidth: '800px',
+                maxHeight: '800px',
+                objectFit: 'contain'
+              }}
+            />
           </div>
         </div>
       </section>
@@ -406,11 +394,17 @@ const NewHomePage = () => {
             </div>
           </div>
           <div className="testimonial-art-side">
-            <div className="mortar-medallion">
-              <div style={{ fontSize: '42px', marginBottom: '4px' }}>🥣</div>
-              <div style={{ fontSize: '11px', fontWeight: 900, letterSpacing: '1.5px', color: 'var(--primary-dark)' }}>ARADHYA</div>
-              <div style={{ fontSize: '9px', fontWeight: 700, color: 'var(--accent-green)', letterSpacing: '1px' }}>100% PURITY</div>
-            </div>
+            <img 
+              src="/testionial image.png" 
+              alt="Patient Testimonial"
+              style={{
+                width: '90%',
+                height: 'auto',
+                maxHeight: '260px',
+                objectFit: 'contain',
+                borderRadius: '12px'
+              }}
+            />
           </div>
         </div>
       </section>
