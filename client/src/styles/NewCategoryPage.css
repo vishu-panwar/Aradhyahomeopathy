@@ -1,0 +1,529 @@
+/* Premium Category Page - Aradhya Homeopathy */
+
+:root {
+  --primary-dark: #0a3a32;
+  --primary-emerald: #124d43;
+  --accent-green: #2e7d32;
+  --accent-light-green: #eaf5ef;
+  --bg-warm: #f4f0e8;
+  --bg-sand: #e6decb;
+  --bg-card: #ffffff;
+  --text-main: #141c19;
+  --text-muted: #5e6d67;
+  --border-subtle: #ded5c2;
+  --border-light: #ece5d6;
+  --shadow-sm: 0 4px 12px rgba(10, 58, 50, 0.05);
+  --shadow-md: 0 10px 25px rgba(10, 58, 50, 0.08);
+  --shadow-hover: 0 16px 36px rgba(10, 58, 50, 0.12);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.new-category-page {
+  background-color: var(--bg-warm);
+  padding-top: 0;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  padding: 18px 0 10px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary-dark);
+}
+
+/* Category Hero Section */
+.category-hero {
+  padding: 10px 0 35px;
+}
+
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.cat-hero-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  line-height: 1.15;
+  font-weight: 900;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+
+.cat-hero-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 22px;
+  max-width: 520px;
+}
+
+.trust-pills-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.trust-pill {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 30px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Right Artwork Card */
+.hero-banner-visual {
+  background: radial-gradient(circle, rgba(230, 222, 203, 0.6) 0%, rgba(255, 255, 255, 0.95) 100%);
+  border: 2px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.hero-leaves-art {
+  font-size: 80px;
+  filter: drop-shadow(0 10px 18px rgba(10, 58, 50, 0.12));
+}
+
+/* 4-Item Quick Service Bar */
+.service-bar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.service-box {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.service-box:hover {
+  border-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Main Layout (Sidebar + 4-Column Cards) */
+.category-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+/* Left Categories Sidebar */
+.sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 90px;
+}
+
+.sidebar-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-card-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.sidebar-cat-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-cat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.sidebar-cat-item:hover,
+.sidebar-cat-item.active {
+  background: var(--bg-warm);
+  color: var(--primary-dark);
+  font-weight: 800;
+}
+
+.sidebar-cat-item.active {
+  background: #eef6f2;
+  border-left: 3px solid var(--primary-dark);
+}
+
+.sidebar-cat-count {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* Sidebar Consultation Card */
+.sidebar-consult-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar-consult-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.btn-sidebar-consult {
+  display: block;
+  width: 100%;
+  background: var(--primary-dark);
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.btn-sidebar-consult:hover {
+  background: var(--primary-emerald);
+}
+
+/* Right Main Cards Matrix */
+.catalog-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.catalog-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.catalog-counter-tag {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* 4-Column Category Grid */
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.category-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: #cbbe9f;
+}
+
+/* Card Top Header: Non-overlapping Side-by-side */
+.card-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+  min-height: 48px;
+}
+
+.card-cat-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  line-height: 1.2;
+  flex: 1;
+  white-space: pre-line;
+}
+
+.card-cat-desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.35;
+  flex: 1.1;
+  text-align: right;
+}
+
+/* Middle Visual Preview: 2 Mini Products */
+.card-bottles-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background: #fbf9f4;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 12px 8px 10px;
+  margin-bottom: 14px;
+}
+
+.preview-bottle-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%;
+  text-align: center;
+}
+
+.mini-bottle-graphic {
+  width: 36px;
+  height: 56px;
+  background: #ffffff;
+  border: 1px solid #dcd4c4;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.b-blue {
+  border-top: 3px solid #1e40af;
+}
+
+.b-green {
+  border-top: 3px solid #059669;
+}
+
+.b-red {
+  border-top: 3px solid #dc2626;
+}
+
+.b-yellow {
+  border-top: 3px solid #d97706;
+}
+
+.b-purple {
+  border-top: 3px solid #9333ea;
+}
+
+.b-pink {
+  border-top: 3px solid #db2777;
+}
+
+.mini-bottle-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+/* Card Bottom Action Row */
+.card-bottom-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border-light);
+  margin-top: auto;
+}
+
+.card-product-count {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.card-arrow-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-dark);
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.category-card:hover .card-arrow-circle {
+  background: var(--primary-dark);
+  color: #ffffff;
+  border-color: var(--primary-dark);
+  transform: translateX(3px);
+}
+
+/* Bottom Need Help Banner */
+.consult-cta-banner {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px 32px;
+  margin-bottom: 60px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.consult-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.calendar-icon {
+  font-size: 32px;
+}
+
+.consult-banner-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 2px;
+}
+
+.consult-banner-text p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+}
+
+.btn-consult-action {
+  background: var(--primary-dark);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-consult-action:hover {
+  background: var(--primary-emerald);
+  transform: translateY(-2px);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .category-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .category-layout {
+    grid-template-columns: 240px 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .category-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-wrapper {
+    position: static;
+  }
+  .category-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .service-bar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+  }
+  .consult-cta-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .consult-banner-left {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .category-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-bar-grid {
+    grid-template-columns: 1fr;
+  }
+  .cat-hero-heading {
+    font-size: 34px;
+  }
+}

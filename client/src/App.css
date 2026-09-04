@@ -9,7 +9,7 @@ html, body, #root {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
-  background: #e7ddc8;
+  background: #f7f4ed;
 }
 
 body {
@@ -22,7 +22,7 @@ body {
 
 .App {
   min-height: 100vh;
-  background: #e7ddc8;
+  background: #f7f4ed;
   padding-top: 0;
   width: 100%;
   max-width: 100%;

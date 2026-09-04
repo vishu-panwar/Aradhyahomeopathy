@@ -360,3 +360,12 @@
     padding-right: 2.5%;
   }
 }
+
+
+/* Product Card Link */
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}

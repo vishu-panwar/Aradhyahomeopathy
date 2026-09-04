@@ -1,9 +1,9 @@
 /* Site Header */
 .site-header {
-  background: #e7ddc8;
+  background: #ffffff;
   padding: 0.2rem 0;
-  border-bottom: none;
-  box-shadow: 0 1px 0 rgba(28, 28, 28, 0.06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .mobile-menu,

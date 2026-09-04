@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TopSellingProducts.css';
 
 const TopSellingProducts = () => {
   const products = [
     {
-      id: 1,
+      id: 'bp-care-medicine',
       title: 'BP Care Medicine',
       subtitle: '30 Tablets - Effective Formula',
       price: '₹750',
@@ -12,7 +13,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 2,
+      id: 'asthmaxx-relief',
       title: 'Asthmaxx Relief',
       subtitle: '30 Capsules - Natural Formula',
       price: '₹850',
@@ -20,7 +21,7 @@ const TopSellingProducts = () => {
       priceLabel: '/pack'
     },
     {
-      id: 3,
+      id: 'cervo-go-tablets',
       title: 'Cervo Go Tablets',
       subtitle: 'Pain Relief - 30 Tablets',
       price: '₹950',
@@ -28,7 +29,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 4,
+      id: 'immunity-booster',
       title: 'Immunity Booster',
       subtitle: 'Complete Wellness Pack',
       price: '₹1,200',
@@ -36,7 +37,7 @@ const TopSellingProducts = () => {
       priceLabel: '/pack'
     },
     {
-      id: 5,
+      id: 'hair-care-solution',
       title: 'Hair Care Solution',
       subtitle: 'Natural Growth Formula',
       price: '₹650',
@@ -44,7 +45,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 6,
+      id: 'digestive-care-drops',
       title: 'Digestive Care Drops',
       subtitle: 'Natural Comfort - 30 ml',
       price: '₹699',
@@ -52,7 +53,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 7,
+      id: 'family-immunity-support',
       title: 'Family Immunity Support',
       subtitle: 'Daily Wellness - 30 Tablets',
       price: '₹999',
@@ -60,7 +61,7 @@ const TopSellingProducts = () => {
       priceLabel: '/pack'
     },
     {
-      id: 8,
+      id: 'joint-comfort-formula',
       title: 'Joint Comfort Formula',
       subtitle: 'Natural Relief - 30 ml',
       price: '₹899',
@@ -68,7 +69,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 9,
+      id: 'stress-relief-drops',
       title: 'Stress Relief Drops',
       subtitle: 'Calm Care - 30 ml',
       price: '₹799',
@@ -76,7 +77,7 @@ const TopSellingProducts = () => {
       priceLabel: '/bottle'
     },
     {
-      id: 10,
+      id: 'complete-wellness-pack',
       title: 'Complete Wellness Pack',
       subtitle: 'Everyday Care - Combo Pack',
       price: '₹1200',
@@ -92,34 +93,36 @@ const TopSellingProducts = () => {
           <div>
             <h2>Top Selling Products</h2>
           </div>
-          <a href="#explore" className="explore-link">
+          <Link to="/shop" className="explore-link">
             Explore more →
-          </a>
+          </Link>
         </div>
 
         <div className="products-scroll-container">
           {products.map((product) => (
             <div key={product.id} className="product-card">
-              <div className="product-image-container">
-                <img 
-                  src={product.image} 
-                  alt={product.title}
-                  className="product-card-image"
-                />
-              </div>
-
-              <div className="product-info">
-                <h3 className="product-title">{product.title}</h3>
-                <p className="product-subtitle">{product.subtitle}</p>
-              </div>
-
-              <div className="product-footer">
-                <div className="product-price-wrapper">
-                  <span className="product-price">{product.price}</span>
-                  <span className="price-label">{product.priceLabel}</span>
+              <Link to={`/product/${product.id}`} className="product-card-link">
+                <div className="product-image-container">
+                  <img 
+                    src={product.image} 
+                    alt={product.title}
+                    className="product-card-image"
+                  />
                 </div>
-                <button className="details-btn">Details →</button>
-              </div>
+
+                <div className="product-info">
+                  <h3 className="product-title">{product.title}</h3>
+                  <p className="product-subtitle">{product.subtitle}</p>
+                </div>
+
+                <div className="product-footer">
+                  <div className="product-price-wrapper">
+                    <span className="product-price">{product.price}</span>
+                    <span className="price-label">{product.priceLabel}</span>
+                  </div>
+                  <button className="details-btn">Details →</button>
+                </div>
+              </Link>
             </div>
           ))}
         </div>

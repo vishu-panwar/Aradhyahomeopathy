@@ -1,27 +1,103 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ContactPage.css';
+import { initEmailJS, sendOwnerNotification, validateFormData } from '../utils/emailService';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     phone: '',
     subject: '',
-    message: ''
+    message: '',
+    consultationSlot: ''
   });
 
+  const [requestType, setRequestType] = useState('GENERAL ENQUIRY');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ show: false, type: '', message: '' });
+  const [errors, setErrors] = useState({});
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleRequestTypeChange = (type) => {
+    setRequestType(type);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
+    
+    // Validate form
+    const validation = validateFormData(formData);
+    if (!validation.isValid) {
+      setErrors(validation.errors);
+      setSubmitStatus({
+        show: true,
+        type: 'error',
+        message: '❌ Please fill all required fields correctly'
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ show: false, type: '', message: '' });
+    setErrors({});
+
+    try {
+      // Send email to owner
+      await sendOwnerNotification(formData, requestType);
+      
+      // Show success message
+      setSubmitStatus({
+        show: true,
+        type: 'success',
+        message: requestType === 'BOOK A FREE CONSULTATION' 
+          ? '✅ Thank you! Your consultation request has been received. We will contact you within 24 hours to schedule your appointment.'
+          : '✅ Thank you for contacting us! We have received your inquiry and will respond shortly.'
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: '',
+        consultationSlot: ''
+      });
+
+      // Auto-hide success message after 6 seconds
+      setTimeout(() => {
+        setSubmitStatus({ show: false, type: '', message: '' });
+      }, 6000);
+
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus({
+        show: true,
+        type: 'error',
+        message: '❌ Oops! Something went wrong. Please try again or contact us directly at support@aradhyahomeopathy.in'
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -77,21 +153,43 @@ const ContactPage = () => {
             <p className="section-subheading">We'll get back to you as soon as possible.</p>
             
             <div className="form-actions">
-              <button className="action-btn primary">📞 General Enquiry</button>
-              <button className="action-btn secondary">📅 Book Consultation</button>
+              <button 
+                type="button"
+                className={`action-btn ${requestType === 'GENERAL ENQUIRY' ? 'primary' : 'secondary'}`}
+                onClick={() => handleRequestTypeChange('GENERAL ENQUIRY')}
+              >
+                📞 General Enquiry
+              </button>
+              <button 
+                type="button"
+                className={`action-btn ${requestType === 'BOOK A FREE CONSULTATION' ? 'primary' : 'secondary'}`}
+                onClick={() => handleRequestTypeChange('BOOK A FREE CONSULTATION')}
+              >
+                📅 Book Consultation
+              </button>
             </div>
+
+            {/* Status Message */}
+            {submitStatus.show && (
+              <div className={`submit-status ${submitStatus.type}`}>
+                {submitStatus.message}
+              </div>
+            )}
 
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <input
                     type="text"
-                    name="firstName"
-                    placeholder="👤 Your Name"
-                    value={formData.firstName}
+                    name="name"
+                    placeholder="👤 Your Full Name"
+                    value={formData.name}
                     onChange={handleChange}
+                    disabled={isSubmitting}
+                    className={errors.name ? 'error' : ''}
                     required
                   />
+                  {errors.name && <span className="error-msg">{errors.name}</span>}
                 </div>
                 <div className="form-group">
                   <input
@@ -100,8 +198,11 @@ const ContactPage = () => {
                     placeholder="✉️ Your Email"
                     value={formData.email}
                     onChange={handleChange}
+                    disabled={isSubmitting}
+                    className={errors.email ? 'error' : ''}
                     required
                   />
+                  {errors.email && <span className="error-msg">{errors.email}</span>}
                 </div>
               </div>
 
@@ -113,38 +214,68 @@ const ContactPage = () => {
                     placeholder="📞 Your Phone Number"
                     value={formData.phone}
                     onChange={handleChange}
+                    disabled={isSubmitting}
+                    className={errors.phone ? 'error' : ''}
                     required
                   />
+                  {errors.phone && <span className="error-msg">{errors.phone}</span>}
                 </div>
                 <div className="form-group">
                   <select
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
+                    disabled={isSubmitting}
+                    className={errors.subject ? 'error' : ''}
                     required
                   >
                     <option value="">Select Subject</option>
                     <option>General Inquiry</option>
                     <option>Product Information</option>
                     <option>Consultation Request</option>
+                    <option>Chronic Allergy & Skin Consultation</option>
+                    <option>Digestive Health Consultation</option>
+                    <option>Respiratory Issues Consultation</option>
                     <option>Order Support</option>
+                    <option>Other</option>
                   </select>
+                  {errors.subject && <span className="error-msg">{errors.subject}</span>}
                 </div>
               </div>
+
+              {requestType === 'BOOK A FREE CONSULTATION' && (
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="consultationSlot"
+                    placeholder="🕐 Preferred Time Slot (e.g., Tomorrow Morning 11:00 AM - 12:30 PM)"
+                    value={formData.consultationSlot}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
+                  />
+                </div>
+              )}
 
               <div className="form-group">
                 <textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Your Message / Clinical Query"
                   value={formData.message}
                   onChange={handleChange}
+                  disabled={isSubmitting}
+                  className={errors.message ? 'error' : ''}
                   rows="5"
                   required
                 />
+                {errors.message && <span className="error-msg">{errors.message}</span>}
               </div>
 
-              <button type="submit" className="submit-button">
-                📧 Send Message
+              <button 
+                type="submit" 
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? '⏳ Sending...' : '📧 Send Message'}
               </button>
             </form>
           </div>
