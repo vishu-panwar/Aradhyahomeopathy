@@ -102,15 +102,15 @@ const NewHomePage = () => {
               <Link to="/shop" className="btn-hero-secondary">Order Medicines</Link>
             </div>
           </div>
-          <div className="hero-art-frame">
+          <div className="hero-art-frame" style={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <img 
               src="/hero image.png" 
               alt="Aradhya Homeopathy"
               style={{
                 width: '100%',
-                height: '100%',
-                maxWidth: '800px',
-                maxHeight: '800px',
+                maxWidth: 'none',
+                height: '-400px',
+                minWidth: '700px',
                 objectFit: 'contain'
               }}
             />
