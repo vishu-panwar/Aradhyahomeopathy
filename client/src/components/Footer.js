@@ -1,103 +1,87 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="site-footer">
       <div className="footer-container">
-        <div className="footer-content">
-          {/* Company Info */}
-          <div className="footer-section">
-            <div className="footer-logo">
-              <img 
-                src="/ChatGPT_Image_Aug_20__2026__02_56_04_PM-removebg-preview.png" 
-                alt="Aradhya Homeopathy Logo" 
-                className="footer-logo-image"
-              />
-            </div>
-            <p className="footer-description">
-              Your health, our priority. We deliver high-quality homeopathy medicines 
-              nationwide with care and dedication. Trusted by thousands for natural healing 
-              and wellness solutions.
+        <div className="footer-grid-layout">
+          {/* Brand & Mission Column */}
+          <div>
+            <h3 className="footer-brand-title">
+              Aradhya <span>Homeopathy</span>
+            </h3>
+            <p className="footer-brand-desc">
+              Your health, our priority. We deliver high-quality homeopathy medicines nationwide 
+              with care and dedication. Trusted by thousands for natural healing and wellness solutions.
             </p>
-            <div className="social-links">
-              <a href="#facebook" className="social-link" aria-label="Facebook">
-                📘
-              </a>
-              <a href="#instagram" className="social-link" aria-label="Instagram">
-                📷
-              </a>
-              <a href="#twitter" className="social-link" aria-label="Twitter">
-                🐦
-              </a>
-              <a href="#whatsapp" className="social-link" aria-label="WhatsApp">
-                💬
-              </a>
-              <a href="#youtube" className="social-link" aria-label="YouTube">
-                📺
-              </a>
+            <div className="footer-social-row">
+              <a href="#facebook" className="footer-social-icon" aria-label="Facebook">📱</a>
+              <a href="#whatsapp" className="footer-social-icon" aria-label="WhatsApp">💬</a>
+              <a href="#website" className="footer-social-icon" aria-label="Website">🌐</a>
+              <a href="mailto:info@aradhyahomeopathy.com" className="footer-social-icon" aria-label="Email">✉️</a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="footer-section">
-            <h3 className="footer-heading">Quick Links</h3>
-            <ul className="footer-links">
-              <li><a href="#home" className="footer-link">Home</a></li>
-              <li><a href="#about" className="footer-link">About Us</a></li>
-              <li><a href="#products" className="footer-link">Products</a></li>
-              <li><a href="#services" className="footer-link">Services</a></li>
-              <li><a href="#blog" className="footer-link">Blog</a></li>
-              <li><a href="#contact" className="footer-link">Contact</a></li>
+          {/* Quick Links Column */}
+          <div>
+            <h4 className="footer-heading">Quick Links</h4>
+            <ul className="footer-links-list">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/shop">Products</Link></li>
+              <li><Link to="/category">Categories</Link></li>
+              <li><Link to="/combo-pack">Combo Packs</Link></li>
+              <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
-          <div className="footer-section">
-            <h3 className="footer-heading">Our Services</h3>
-            <ul className="footer-links">
-              <li><a href="#consultation" className="footer-link">Online Consultation</a></li>
-              <li><a href="#delivery" className="footer-link">Home Delivery</a></li>
-              <li><a href="#treatment" className="footer-link">Treatment Plans</a></li>
-              <li><a href="#wellness" className="footer-link">Wellness Programs</a></li>
-              <li><a href="#support" className="footer-link">24/7 Support</a></li>
+          {/* Services Column */}
+          <div>
+            <h4 className="footer-heading">Our Services</h4>
+            <ul className="footer-links-list">
+              <li><Link to="/contact">Online Consultation</Link></li>
+              <li><Link to="/shop">Home Delivery</Link></li>
+              <li><Link to="/contact">Treatment Plans</Link></li>
+              <li><Link to="/about">Wellness Programs</Link></li>
+              <li><Link to="/contact">24/7 Support</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="footer-section">
-            <h3 className="footer-heading">Contact Us</h3>
-            <div className="contact-item">
-              <span className="contact-icon">📍</span>
-              <span>123 Health Street, Wellness City, India - 400001</span>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">📞</span>
-              <span>+91 98765 43210</span>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">✉️</span>
-              <span>info@Aradhyahomeopathy.com</span>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">⏰</span>
-              <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
-            </div>
+          {/* Contact Info Column */}
+          <div>
+            <h4 className="footer-heading">Contact Us</h4>
+            <ul className="footer-contact-list">
+              <li>
+                <span>📍</span>
+                <span>123 Health Street, Wellness City, India - 400001</span>
+              </li>
+              <li>
+                <span>📞</span>
+                <a href="tel:+919876543210">+91 98765 43210</a>
+              </li>
+              <li>
+                <span>✉️</span>
+                <a href="mailto:info@aradhyahomeopathy.com">info@aradhyahomeopathy.com</a>
+              </li>
+              <li>
+                <span>⏰</span>
+                <span>Mon - Sat: 9:00 AM - 8:00 PM<br />(Sunday: Closed)</span>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      {/* Footer Bottom */}
-      <div className="footer-bottom">
-        <div className="footer-bottom-content">
-          <p className="copyright">
-            © 2026 Aradhya Homeopathy. All rights reserved. Made with ❤️ in India
-          </p>
-          <ul className="footer-bottom-links">
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of Service</a></li>
-            <li><a href="#cookies">Cookie Policy</a></li>
-          </ul>
+        {/* Bottom Legal Bar */}
+        <div className="footer-bottom-strip">
+          <div>© 2026 Aradhya Homeopathy. All rights reserved. Made with ❤️ in India</div>
+          <div className="footer-legal-links">
+            <Link to="/privacy">Privacy Policy</Link>
+            <Link to="/terms">Terms of Service</Link>
+            <Link to="/cookies">Cookie Policy</Link>
+          </div>
         </div>
       </div>
     </footer>
