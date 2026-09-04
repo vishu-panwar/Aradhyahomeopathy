@@ -411,16 +411,39 @@ const NewHomePage = () => {
 
       {/* SECTION 8: Homoeopathic Approach */}
       <section className="new-home-container" id="approach">
-        <div className="approach-card">
-          <h2>
-            Homoeopathic<br />
-            Approach
-          </h2>
-          <div className="approach-line"></div>
-          <p>
-            At Aradhya, we believe there's a better way to feel better with homoeopathic. Discover this holistic system of medicine and all the transformative benefits it can offer to your lifestyle.
-          </p>
-          <Link to="/about" className="btn-hero-primary" style={{ display: 'inline-block' }}>Learn About Homeopathy</Link>
+        <div className="approach-card-wrapper">
+          <div className="approach-card-content">
+            <h2>
+              Homoeopathic<br />
+              Approach
+            </h2>
+            <div className="approach-line"></div>
+            <p>
+              At Aradhya, we believe there's a better way to feel better with homoeopathic. Discover this holistic system of medicine and all the transformative benefits it can offer to your lifestyle.
+            </p>
+            <Link to="/about" className="btn-hero-primary" style={{ display: 'inline-block' }}>Learn About Homeopathy</Link>
+          </div>
+          
+          <div className="approach-circular-image">
+            <div className="circular-text-wrapper">
+              <svg className="circular-text" viewBox="0 0 200 200">
+                <defs>
+                  <path
+                    id="circlePath"
+                    d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                  />
+                </defs>
+                <text className="rotating-text">
+                  <textPath href="#circlePath">
+                    MEDICINES. ARADHYA. HOMOEOPATHY. MEDICINES. ARADHYA. HOMOEOPATHY.
+                  </textPath>
+                </text>
+              </svg>
+              <div className="circular-image-center">
+                <img src="/circular animation doctor.png" alt="Aradhya Homeopathy Doctor" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
