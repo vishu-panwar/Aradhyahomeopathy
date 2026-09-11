@@ -54,7 +54,7 @@ const ProductDetail = () => {
             <div className="gallery-container-new">
               <div className="main-image-card-new">
                 <span className="badge-authentic">✓ CERTIFIED PHARMACOPEIAL QUALITY</span>
-                <span className="badge-potency-corner">{selectedPotency} Potency</span>
+                <span className="badge-potency-corner">30C Potency</span>
                 
                 {/* Bottle Illustration */}
                 <div className="medicine-bottle-art">
@@ -65,13 +65,13 @@ const ProductDetail = () => {
                       <div>
                         <div className="bottle-label-brand">Aradhya Homeopathy</div>
                         <div className="bottle-label-name">{product.name}</div>
-                        <div className="bottle-label-potency">{selectedPotency}</div>
+                        <div className="bottle-label-potency">30C</div>
                       </div>
                       <div className="bottle-label-detail">
                         Pure Cane Sugar Pellets<br/>Hand-Succussed Dilution
                       </div>
                       <div className="bottle-label-meta">
-                        HPI / HPUS Standard &bull; {selectedSize}
+                        HPI / HPUS Standard &bull; 30ml
                       </div>
                     </div>
                   </div>
@@ -187,7 +187,7 @@ const ProductDetail = () => {
                 <div className="option-compact-item">
                   <div className="option-compact-label">POTENCY</div>
                   <div className="option-compact-value">
-                    <span className="opt-icon">💧</span> {selectedPotency}
+                    <span className="opt-icon">💧</span> 30C
                   </div>
                   <div className="option-compact-sub">Most Prescribed</div>
                 </div>
@@ -203,7 +203,7 @@ const ProductDetail = () => {
                 <div className="option-compact-item">
                   <div className="option-compact-label">BOTTLE SIZE</div>
                   <div className="option-compact-value">
-                    <span className="opt-icon">🧴</span> {selectedSize}
+                    <span className="opt-icon">🧴</span> 30ml
                   </div>
                   <div className="option-compact-sub">~ 450 Globules</div>
                 </div>
