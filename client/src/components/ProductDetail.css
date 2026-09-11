@@ -1363,12 +1363,12 @@
     max-width: 100%;
   }
 
-  /* Show Breadcrumbs on Mobile - In Top Space */
+  /* Show Breadcrumbs on Mobile - Compact Style */
   .breadcrumbs-new {
     display: block !important;
     height: auto !important;
     margin: 0 !important;
-    padding: 12px 12px 10px !important;
+    padding: 10px 12px 8px !important;
     overflow: visible !important;
     line-height: normal !important;
     background: transparent;
@@ -1428,7 +1428,7 @@
     background: transparent;
   }
 
-  /* Gallery Section - Starts Immediately After Header (No Top Space) */
+  /* Gallery Section - Close to Breadcrumbs */
   .gallery-container-new {
     position: relative;
     margin: 0 !important;
@@ -1438,8 +1438,8 @@
   }
 
   .main-image-card-new {
-    padding: 30px 12px 35px;
-    min-height: 400px;
+    padding: 25px 12px 30px;
+    min-height: 380px;
     border-radius: 0 0 20px 20px;
     background: linear-gradient(180deg, #e8f5ef 0%, #d4f1e3 100%);
     position: relative;
