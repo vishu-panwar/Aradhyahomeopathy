@@ -1344,36 +1344,29 @@
 }
 
 @media (max-width: 640px) {
-  /* Container & Spacing */
+  /* Remove ALL Top Space */
   .product-detail-page-new {
     padding-top: 0;
-    background-color: #DDD9C3;
+    background-color: #ffffff;
+    margin-top: -20px; /* Pull up to remove gap */
   }
 
   .container-new {
-    padding: 0 16px;
+    padding: 0;
   }
 
+  /* Hide Breadcrumbs Completely */
   .breadcrumbs-new {
-    padding: 8px 0;
-    background: transparent;
-  }
-
-  .breadcrumbs-new .container-new {
-    font-size: 11px;
-    gap: 6px;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .breadcrumbs-new .container-new::-webkit-scrollbar {
-    display: none;
+    display: none !important;
+    height: 0;
+    margin: 0;
+    padding: 0;
   }
 
   .product-details-section-new {
-    padding: 0 0 24px;
+    padding: 0;
     background: transparent;
+    margin-top: 0;
   }
 
   .product-grid-new {
@@ -1381,38 +1374,71 @@
     flex-direction: column;
     gap: 0;
     padding: 0;
+    margin: 0;
     border-radius: 0;
     box-shadow: none;
     background: transparent;
   }
 
-  /* Gallery Section - Full Width Image Carousel */
+  /* Gallery Section - Starts Right After Header */
   .gallery-container-new {
     position: relative;
-    margin-bottom: 24px;
+    margin: 0;
     width: 100%;
+    order: 1;
   }
 
   .main-image-card-new {
-    padding: 32px 16px;
-    min-height: 440px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #e8f5ef 0%, #f0f8f4 100%);
+    padding: 30px 20px 35px;
+    min-height: 400px;
+    border-radius: 0;
+    background: linear-gradient(180deg, #e8f5ef 0%, #d4f1e3 100%);
     position: relative;
     border: none;
-    margin: 0 16px 16px 16px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: none;
   }
 
   .badge-authentic {
     display: none;
   }
 
+  /* Potency Badge - Top Right Corner */
   .badge-potency-corner {
-    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(232, 245, 239, 0.95);
+    backdrop-filter: blur(10px);
+    color: var(--primary-dark);
+    font-size: 16px;
+    font-weight: 900;
+    padding: 12px;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(18, 77, 67, 0.2);
+    letter-spacing: 0;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.1;
+    z-index: 20;
+  }
+
+  .badge-potency-corner::after {
+    content: 'Potency';
+    font-size: 9px;
+    font-weight: 600;
+    margin-top: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
   }
 
   /* Image Carousel Navigation Arrows */
@@ -1447,93 +1473,156 @@
     background-size: 24px;
   }
 
-  /* Medicine Bottle - Centered Display */
+  /* Medicine Bottle - Larger Center Display */
   .medicine-bottle-art {
-    width: 220px;
-    height: 320px;
+    width: 200px;
+    height: 300px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: drop-shadow(0 8px 20px rgba(18, 77, 67, 0.2));
   }
 
   .bottle-cap {
-    width: 74px;
-    height: 34px;
+    width: 70px;
+    height: 30px;
   }
 
   .bottle-neck {
-    width: 52px;
-    height: 20px;
+    width: 50px;
+    height: 18px;
   }
 
   .bottle-body {
-    width: 184px;
-    height: 250px;
+    width: 170px;
+    height: 240px;
   }
 
   .bottle-label {
-    width: 148px;
-    height: 190px;
-    padding: 15px 11px;
+    width: 140px;
+    height: 180px;
+    padding: 14px 10px;
   }
 
   .bottle-label-brand {
-    font-size: 8.5px;
+    font-size: 8px;
   }
 
   .bottle-label-name {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .bottle-label-potency {
-    font-size: 13px;
-    padding: 3px 7px;
+    font-size: 12px;
+    padding: 2px 6px;
   }
 
   .bottle-label-detail {
-    font-size: 9.5px;
+    font-size: 9px;
   }
 
   .bottle-label-meta {
-    font-size: 7.5px;
+    font-size: 7px;
   }
 
   .bottle-desc {
     display: none;
   }
 
-  /* Horizontal Thumbnail Gallery - 4 Column Grid */
-  .horizontal-thumb-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  /* Pagination Dots Below Image */
+  .pagination-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
     gap: 8px;
-    padding: 0 16px;
-    margin: 0 0 24px 0;
+    z-index: 20;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(18, 77, 67, 0.3);
+    transition: all 0.3s;
+  }
+
+  .dot.active {
+    background: var(--primary-dark);
+    width: 24px;
+    border-radius: 4px;
+  }
+
+  /* Horizontal Thumbnail Gallery - NON-STICKY, Scrolls Normally */
+  .horizontal-thumb-gallery {
+    display: flex;
+    gap: 10px;
+    padding: 12px 16px;
+    margin: 0;
+    background: #ffffff;
+    order: 2;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    position: relative; /* NOT fixed or sticky */
+  }
+
+  .horizontal-thumb-gallery::-webkit-scrollbar {
+    display: none;
   }
 
   .thumb-card-horizontal {
-    width: 100%;
-    min-width: auto;
-    min-height: 76px;
-    max-width: none;
-    max-height: 76px;
-    padding: 8px;
+    width: 65px;
+    min-width: 65px;
+    height: 65px;
+    max-height: 65px;
+    flex-shrink: 0;
+    padding: 6px;
     border-radius: 10px;
     background: #ffffff;
     border: 2px solid #e5e5e5;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    scroll-snap-align: start;
+  }
+
+  /* Remove hover effects that conflict on mobile */
+  .thumb-card-horizontal::before {
+    display: none;
   }
 
   .thumb-card-horizontal.active {
-    border-color: var(--primary-dark);
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(7, 46, 39, 0.15);
+    border-color: #16a34a;
+    background: #f0fdf4;
+    box-shadow: 0 3px 10px rgba(22, 163, 74, 0.2);
   }
 
-  .thumb-card-horizontal:hover {
-    border-color: var(--primary-emerald);
+  /* Active checkmark - clean design */
+  .thumb-card-horizontal.active::after {
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    top: 3px;
+    right: 3px;
+    background: #16a34a;
+  }
+
+  .thumb-card-horizontal:active {
+    transform: scale(0.95);
+  }
+
+  /* Remove complex hover animations on mobile */
+  .thumb-card-horizontal:hover .thumb-product-image {
+    transform: none;
+  }
+
+  .thumb-card-horizontal.active .thumb-product-image {
+    transform: none;
   }
 
   .thumb-image-box {
@@ -1542,10 +1631,11 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    border-radius: 6px;
   }
 
   .thumb-product-image {
-    max-height: 60px;
+    max-height: 50px;
     max-width: 100%;
     width: auto;
     height: auto;
@@ -1553,18 +1643,22 @@
   }
 
   .thumb-image-box.leaves-bg {
-    background: linear-gradient(135deg, #e8f5ef 0%, #f0f8f4 100%);
+    background: linear-gradient(135deg, #e8f5ef 0%, #d4f1e3 100%);
     border-radius: 6px;
-    padding: 6px;
+    padding: 4px;
   }
 
-  /* Product Info Section - White Card with Proper Spacing */
+  /* Product Info Section - Fully Visible, No Overlap */
   .product-info-card-new {
-    padding: 24px 20px;
+    padding: 18px 16px 40px;
     background: #ffffff;
-    border-radius: 16px;
-    margin: 16px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    order: 3;
+    position: relative;
+    z-index: 1;
+    min-height: auto;
   }
 
   .top-badges-row {
@@ -1572,57 +1666,99 @@
   }
 
   .category-tag-new {
-    font-size: 10px;
-    letter-spacing: 0.8px;
+    font-size: 9px;
+    letter-spacing: 1px;
     margin-bottom: 6px;
     color: var(--primary-emerald);
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
   }
 
   .product-title-new {
-    font-size: 28px;
+    font-size: 26px;
     line-height: 1.2;
     margin-bottom: 8px;
     color: var(--primary-dark);
+    font-weight: 700;
   }
 
   .scientific-name-new {
-    font-size: 14px;
-    margin-bottom: 14px;
+    font-size: 13px;
+    margin-bottom: 12px;
     color: var(--text-muted);
     font-style: italic;
   }
 
-  /* Rating Row */
+  /* Rating Row - Visible */
   .rating-row-new {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 16px;
-    padding-bottom: 16px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #f0f0f0;
     flex-wrap: wrap;
   }
 
   .stars-new {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
+    color: #fbbf24;
   }
 
   .rating-text-new {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
+    color: var(--text-main);
   }
 
   .verified-count-new {
-    font-size: 12px;
+    font-size: 11px;
     color: var(--text-muted);
   }
 
   .product-description-text {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.7;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     color: var(--text-main);
+  }
+
+  /* Feature Icons - Grid Layout */
+  .feature-icons-compact {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .compact-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .compact-icon {
+    font-size: 28px;
+  }
+
+  .compact-text {
+    font-size: 10px;
+    line-height: 1.3;
+    color: var(--text-muted);
+  }
+
+  .compact-text strong {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 2px;
   }
 
   /* Availability Note - With Icon */
