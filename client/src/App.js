@@ -19,10 +19,6 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        {/* Top Ticker - Above Header */}
-        <div className="top-ticker">
-          🌿 Certified Classical Pharmacopeia Formulations &bull; <span>Free Clinical Consultation on Orders Above ₹499</span>
-        </div>
         <Header />
         <Routes>
           <Route path="/" element={<NewHomePage />} />

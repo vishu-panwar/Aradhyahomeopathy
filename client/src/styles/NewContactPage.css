@@ -5,8 +5,8 @@
   --primary-emerald: #124d43;
   --accent-green: #2e7d32;
   --accent-light-green: #eaf5ef;
-  --bg-warm: #f4f0e8;
-  --bg-sand: #e6decb;
+  --bg-warm: #DDD9C3;
+  --bg-sand: #D3CFB8;
   --bg-card: #ffffff;
   --text-main: #141c19;
   --text-muted: #5e6d67;
@@ -23,7 +23,7 @@
 
 .new-contact-page {
   padding-top: 0;
-  background-color: var(--bg-warm);
+  background-color: #DDD9C3;
 }
 
 .container-new-contact {
@@ -35,7 +35,7 @@
 /* Top Hero Header Section */
 .contact-hero-new {
   padding: 60px 0 40px;
-  background-color: var(--bg-warm);
+  background-color: #DDD9C3;
 }
 
 .hero-grid-new {

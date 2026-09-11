@@ -21,22 +21,22 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Hamburger Icon for Mobile */}
+          {/* Premium Animated Hamburger Button */}
           <button 
             type="button" 
-            className="mobile-toggle-btn" 
+            className={`hamburger-btn ${menuOpen ? 'is-active' : ''}`}
             onClick={toggleMenu}
             aria-label="Toggle Navigation"
+            aria-expanded={menuOpen}
           >
-            ☰
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
           </button>
 
           {/* Navigation Menu Links */}
           <ul className={`nav-menu-list ${menuOpen ? 'is-open' : ''}`} id="mainNavMenu">
             <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-            <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
-            <li><Link to="/category" onClick={closeMenu}>Category</Link></li>
-            <li><Link to="/combo-pack" onClick={closeMenu}>Combo Pack</Link></li>
             <li><Link to="/about" onClick={closeMenu}>About Us</Link></li>
             <li><Link to="/blog" onClick={closeMenu}>Blog</Link></li>
             <li><Link to="/contact" onClick={closeMenu}>Contact Us</Link></li>

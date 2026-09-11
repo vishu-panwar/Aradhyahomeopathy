@@ -63,25 +63,55 @@ const NewHomePage = () => {
 
   return (
     <div className="new-homepage">
-      {/* Seasonal Festivity Ribbon */}
-      <section className="seasonal-ribbon">
-        <div className="seasonal-inner">
-          <div className="festive-bottles-strip">
-            <div className="festive-bottle">
-              <span style={{ fontSize: '14px' }}>💊</span>
-              Cervo Go
-            </div>
-            <div className="festive-bottle">
-              <span style={{ fontSize: '14px' }}>🌿</span>
-              Asthamax
-            </div>
-            <div className="festive-bottle">
-              <span style={{ fontSize: '14px' }}>❤️</span>
-              B.P. Care
+      {/* Auto-Changing Banner Card Slider */}
+      <section className="banner-carousel-wrapper">
+        <div className="banner-carousel-track">
+          {/* Card 1 - Green Gradient */}
+          <div className="banner-slide">
+            <div className="banner-card banner-card-green">
+              <div className="banner-card-left">
+                <div className="product-pills">
+                  <span className="pill-item">💊 Cervo Go</span>
+                  <span className="pill-item">🌿 Asthamax</span>
+                  <span className="pill-item">❤️ B.P. Care</span>
+                </div>
+              </div>
+              <div className="banner-card-center">
+                <h2 className="banner-card-title">रक्षाबंधन Special Wellness Offer</h2>
+                <button className="banner-card-badge">20% OFF • Buy 1 Get 2 Free!</button>
+              </div>
             </div>
           </div>
-          <div className="festive-headline">रक्षाबंधन Special Wellness Offer</div>
-          <div className="festive-badge">20% OFF &bull; Buy 1 Get 2 Free!</div>
+
+          {/* Card 2 - Blue Gradient */}
+          <div className="banner-slide">
+            <div className="banner-card banner-card-blue">
+              <div className="banner-card-center full-width">
+                <h2 className="banner-card-title">🌿 Natural Immunity Booster Pack</h2>
+                <button className="banner-card-badge">Flat 30% OFF • Limited Stock!</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3 - Orange Gradient */}
+          <div className="banner-slide">
+            <div className="banner-card banner-card-orange">
+              <div className="banner-card-center full-width">
+                <h2 className="banner-card-title">💊 Complete Family Wellness Kit</h2>
+                <button className="banner-card-badge">Buy 2 Get 1 Free • Save ₹999</button>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 4 - Purple Gradient */}
+          <div className="banner-slide">
+            <div className="banner-card banner-card-purple">
+              <div className="banner-card-center full-width">
+                <h2 className="banner-card-title">✨ Premium Skin Care Collection</h2>
+                <button className="banner-card-badge">Up to 40% OFF • New Launch</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

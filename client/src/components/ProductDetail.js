@@ -44,17 +44,14 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-page-new">
-      {/* Announcement Bar */}
-      <div className="announcement-bar">
-        🌿 100% Genuine Certified Homeopathic Medicine &bull; <span>Free Clinical Consultation on Orders Above ₹499</span>
-      </div>
-
       {/* Breadcrumb */}
       <div className="breadcrumbs-new">
         <div className="container-new">
-          <Link to="/">Home</Link>
+          <Link to="/">🏠 Home</Link>
           <span className="separator">›</span>
           <Link to="/shop">Medicines</Link>
+          <span className="separator">›</span>
+          <Link to="/shop">Pain Relief</Link>
           <span className="separator">›</span>
           <span className="current">{product.name}</span>
         </div>
@@ -68,7 +65,7 @@ const ProductDetail = () => {
             {/* Left: Gallery */}
             <div className="gallery-container-new">
               <div className="main-image-card-new">
-                <span className="badge-authentic">✓ Certified Pharmacopeial Quality</span>
+                <span className="badge-authentic">✓ CERTIFIED PHARMACOPEIAL QUALITY</span>
                 <span className="badge-potency-corner">{selectedPotency} Potency</span>
                 
                 {/* Bottle Illustration */}
@@ -97,23 +94,57 @@ const ProductDetail = () => {
                 </div>
               </div>
 
-              {/* Thumbnails */}
-              <div className="thumb-row-new">
-                <div className={`thumb-item-new ${selectedSize === '30ml' ? 'active' : ''}`} onClick={() => setSelectedSize('30ml')}>
-                  Standard 30ml
+              {/* Horizontal Thumbnails - Scrollable */}
+              <div className="horizontal-thumb-gallery">
+                <div className="thumb-card-horizontal active">
+                  <div className="thumb-image-box">
+                    <img 
+                      src="/Aradhya Homeopathy  Utsav bhai/1.png" 
+                      alt="Product Front View"
+                      className="thumb-product-image"
+                    />
+                  </div>
                 </div>
-                <div className={`thumb-item-new ${selectedSize === '100ml' ? 'active' : ''}`} onClick={() => setSelectedSize('100ml')}>
-                  Clinic 100ml
+                <div className="thumb-card-horizontal">
+                  <div className="thumb-image-box">
+                    <img 
+                      src="/Aradhya Homeopathy  Utsav bhai/2.png" 
+                      alt="Product Back View"
+                      className="thumb-product-image"
+                    />
+                  </div>
                 </div>
-                <div className="thumb-item-new">Pellet Globules</div>
-                <div className="thumb-item-new">Liquid Dilution</div>
+                <div className="thumb-card-horizontal">
+                  <div className="thumb-image-box">
+                    <img 
+                      src="/Aradhya Homeopathy  Utsav bhai/3.png" 
+                      alt="Product with Globules"
+                      className="thumb-product-image"
+                    />
+                  </div>
+                </div>
+                <div className="thumb-card-horizontal">
+                  <div className="thumb-image-box leaves-bg">
+                    <img 
+                      src="/Aradhya Homeopathy  Utsav bhai/4.png" 
+                      alt="Product with Natural Background"
+                      className="thumb-product-image"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Right: Product Info */}
             <div className="product-info-card-new">
+              <div className="top-badges-row">
+                <span className="badge-green-small">✓ Pure Care</span>
+                <span className="badge-green-small">✓ Natural Healing</span>
+                <span className="badge-green-small">✓ Better Living</span>
+              </div>
+
               <div className="category-tag-new">
-                ✦ {product.category} &bull; Natural Homeopathic Remedy
+                {product.category} &bull; NATURAL HOMEOPATHIC REMEDY
               </div>
               <h1 className="product-title-new">{product.name}</h1>
               <div className="scientific-name-new">{product.shortDescription}</div>
@@ -125,118 +156,84 @@ const ProductDetail = () => {
                 <div className="verified-count-new">({product.reviews} Verified Reviews)</div>
               </div>
 
-              {/* Price */}
-              <div className="price-box-new">
-                <div className="current-price-new">₹{product.price}</div>
-                {product.originalPrice && (
-                  <>
-                    <div className="mrp-price-new">₹{product.originalPrice}</div>
-                    <span className="discount-pill-new">SAVE {product.discount}%</span>
-                  </>
-                )}
-              </div>
-              <div className="tax-note-new">Inclusive of all applicable GST &bull; Fresh Batch Mfd. 2026</div>
+              {/* Description */}
+              <p className="product-description-text">
+                {product.name} is a trusted homeopathic formulation that helps relieve pain naturally. Formulated with high-grade cane sugar pellets and hand-succussed dilution, it is safe, gentle, and effective for everyday use.
+              </p>
 
-              {/* Potency Selector */}
-              <div className="selector-block-new">
-                <div className="selector-label-new">
-                  <span>Select Potency</span>
-                  <a href="#help">Need help choosing potency?</a>
+              {/* Feature Icons Grid - Compact */}
+              <div className="feature-icons-compact">
+                <div className="compact-icon-item">
+                  <div className="compact-icon">🌿</div>
+                  <div className="compact-text">
+                    <strong>100%</strong> Non-Toxic
+                  </div>
                 </div>
-                <div className="option-grid-new">
-                  {['6C', '30C', '200C', '1M'].map(pot => (
-                    <button
-                      key={pot}
-                      className={`option-chip-new ${selectedPotency === pot ? 'selected' : ''}`}
-                      onClick={() => setSelectedPotency(pot)}
-                    >
-                      {pot}
-                      <span>{pot === '30C' ? 'Most Prescribed' : pot === '6C' ? 'Mild / Local' : pot === '200C' ? 'Acute' : 'Constitutional'}</span>
-                    </button>
-                  ))}
+                <div className="compact-icon-item">
+                  <div className="compact-icon">💉</div>
+                  <div className="compact-text">
+                    <strong>HPUS / HPI</strong> Standard
+                  </div>
                 </div>
-              </div>
-
-              {/* Form Selector */}
-              <div className="selector-block-new">
-                <div className="selector-label-new">
-                  <span>Remedy Dispensing Form</span>
+                <div className="compact-icon-item">
+                  <div className="compact-icon">👨‍⚕️</div>
+                  <div className="compact-text">
+                    <strong>Doctor</strong> Supervised
+                  </div>
                 </div>
-                <div className="option-grid-new">
-                  <button
-                    className={`option-chip-new ${selectedForm === 'globules' ? 'selected' : ''}`}
-                    onClick={() => setSelectedForm('globules')}
-                  >
-                    Globules (Pills)
-                    <span>Sugar-Cane Base</span>
-                  </button>
-                  <button
-                    className={`option-chip-new ${selectedForm === 'liquid' ? 'selected' : ''}`}
-                    onClick={() => setSelectedForm('liquid')}
-                  >
-                    Liquid Drops
-                    <span>Alcoholic Dilution</span>
-                  </button>
+                <div className="compact-icon-item">
+                  <div className="compact-icon">✓</div>
+                  <div className="compact-text">
+                    <strong>High-Grade</strong> Quality
+                  </div>
                 </div>
               </div>
 
-              {/* Size Selector */}
-              <div className="selector-block-new">
-                <div className="selector-label-new">
-                  <span>Bottle Pack Size</span>
+              {/* Availability Note - Compact */}
+              <div className="availability-note-compact">
+                <span className="check-icon">✓</span> Available in High-Grade Neutral Cane Globules or Pure Dispensing Liquid
+              </div>
+
+              {/* Product Options - Horizontal Layout */}
+              <div className="product-options-horizontal">
+                <div className="option-compact-item">
+                  <div className="option-compact-label">POTENCY</div>
+                  <div className="option-compact-value">
+                    <span className="opt-icon">💧</span> {selectedPotency}
+                  </div>
+                  <div className="option-compact-sub">Most Prescribed</div>
                 </div>
-                <div className="option-grid-new">
-                  <button
-                    className={`option-chip-new ${selectedSize === '30ml' ? 'selected' : ''}`}
-                    onClick={() => setSelectedSize('30ml')}
-                  >
-                    30 ml
-                    <span>~ 450 Globules</span>
-                  </button>
-                  <button
-                    className={`option-chip-new ${selectedSize === '100ml' ? 'selected' : ''}`}
-                    onClick={() => setSelectedSize('100ml')}
-                  >
-                    100 ml
-                    <span>Family Pack</span>
-                  </button>
-                  <button className="option-chip-new">
-                    Kit of 3
-                    <span>Save Extra ₹40</span>
-                  </button>
+
+                <div className="option-compact-item">
+                  <div className="option-compact-label">FORM</div>
+                  <div className="option-compact-value">
+                    <span className="opt-icon">💊</span> Globules (Pills)
+                  </div>
+                  <div className="option-compact-sub">Sugar Cane Base</div>
+                </div>
+
+                <div className="option-compact-item">
+                  <div className="option-compact-label">BOTTLE SIZE</div>
+                  <div className="option-compact-value">
+                    <span className="opt-icon">🧴</span> {selectedSize}
+                  </div>
+                  <div className="option-compact-sub">~ 450 Globules</div>
                 </div>
               </div>
 
-              {/* Quantity and CTA */}
-              <div className="action-row-new">
-                <div className="qty-picker-new">
-                  <button className="qty-btn-new" onClick={() => handleQuantityChange('decrease')}>−</button>
-                  <span className="qty-value-new">{quantity}</span>
-                  <button className="qty-btn-new" onClick={() => handleQuantityChange('increase')}>+</button>
-                </div>
-                <button className="btn-cart-new">
-                  <span>🛒</span> Add to Medicine Bag
-                </button>
-              </div>
-
-              {/* Consult Button */}
-              <Link to="/contact" className="btn-consult-doctor-new">
-                <span>👨‍⚕️</span> Not sure if this suits your symptoms? Book a Free Homeopathic Evaluation
-              </Link>
-
-              {/* Trust Badges */}
-              <div className="trust-badges-grid-new">
-                <div className="trust-item-new">
+              {/* Trust Badges - Horizontal Compact */}
+              <div className="trust-badges-compact">
+                <div className="trust-compact-item">
                   <strong>100% Non-Toxic</strong>
-                  Safe for all age groups with zero dependency
+                  <span>Safe for all age groups with zero dependency</span>
                 </div>
-                <div className="trust-item-new">
+                <div className="trust-compact-item">
                   <strong>HPUS / HPI Standard</strong>
-                  Manufactured under strict GMP regulations
+                  <span>Manufactured under strict GMP regulations</span>
                 </div>
-                <div className="trust-item-new">
+                <div className="trust-compact-item">
                   <strong>Doctor Supervised</strong>
-                  Verified by certified BHMS practitioners
+                  <span>Verified by certified BHMS practitioners</span>
                 </div>
               </div>
             </div>
