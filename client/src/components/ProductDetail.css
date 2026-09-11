@@ -1363,14 +1363,52 @@
     max-width: 100%;
   }
 
-  /* Hide Breadcrumbs Completely */
+  /* Show Breadcrumbs on Mobile - In Top Space */
   .breadcrumbs-new {
-    display: none !important;
-    height: 0 !important;
+    display: block !important;
+    height: auto !important;
     margin: 0 !important;
+    padding: 12px 12px 10px !important;
+    overflow: visible !important;
+    line-height: normal !important;
+    background: transparent;
+  }
+
+  .breadcrumbs-new .container-new {
     padding: 0 !important;
-    overflow: hidden !important;
-    line-height: 0 !important;
+    font-size: 11px;
+    color: #7a7267;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .breadcrumbs-new .container-new::-webkit-scrollbar {
+    display: none;
+  }
+
+  .breadcrumbs-new a {
+    color: #7a7267;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+  }
+
+  .breadcrumbs-new a:hover {
+    color: var(--primary-dark);
+  }
+
+  .breadcrumbs-new .separator {
+    color: #9a9088;
+  }
+
+  .breadcrumbs-new .current {
+    color: var(--primary-dark);
+    font-weight: 600;
+    white-space: nowrap;
   }
 
   .product-details-section-new {
