@@ -8,11 +8,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [relatedProducts, setRelatedProducts] = useState([]);
-  const [quantity, setQuantity] = useState(1);
   const [activeTab, setActiveTab] = useState('indications');
-  const [selectedPotency, setSelectedPotency] = useState('30C');
-  const [selectedForm, setSelectedForm] = useState('globules');
-  const [selectedSize, setSelectedSize] = useState('30ml');
 
   useEffect(() => {
     const productData = getProductById(productId);
@@ -33,14 +29,6 @@ const ProductDetail = () => {
       </div>
     );
   }
-
-  const handleQuantityChange = (action) => {
-    if (action === 'increase') {
-      setQuantity(prev => prev + 1);
-    } else if (action === 'decrease' && quantity > 1) {
-      setQuantity(prev => prev - 1);
-    }
-  };
 
   return (
     <div className="product-detail-page-new">
