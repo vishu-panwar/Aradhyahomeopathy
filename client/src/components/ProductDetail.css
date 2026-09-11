@@ -1390,7 +1390,7 @@
     background: transparent;
   }
 
-  /* Gallery Section - Starts Immediately After Header */
+  /* Gallery Section - Starts Immediately After Header (No Top Space) */
   .gallery-container-new {
     position: relative;
     margin: 0 !important;
@@ -1406,7 +1406,7 @@
     background: linear-gradient(180deg, #e8f5ef 0%, #d4f1e3 100%);
     position: relative;
     border: none;
-    margin: 0 0 12px;
+    margin: 0 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1566,12 +1566,12 @@
     border-radius: 4px;
   }
 
-  /* Horizontal Thumbnail Gallery - Matches Page Theme */
+  /* Horizontal Thumbnail Gallery - More Space Below */
   .horizontal-thumb-gallery {
     display: flex;
     gap: 10px;
     padding: 12px;
-    margin: 0 12px 12px;
+    margin: 12px 12px 18px;
     background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -1662,12 +1662,12 @@
     padding: 4px;
   }
 
-  /* Product Info Section - Fully Visible, Matches About Page Style */
+  /* Product Info Section - More Space from Thumbnails */
   .product-info-card-new {
-    padding: 18px 12px 40px;
+    padding: 20px 12px 40px;
     background: #ffffff;
     border-radius: 12px;
-    margin: 12px;
+    margin: 0 12px 20px;
     box-shadow: 0 4px 12px rgba(10, 58, 50, 0.08);
     order: 3;
     position: relative;
