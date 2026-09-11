@@ -83,9 +83,9 @@
 
 /* Container */
 .container-new {
-  max-width: 1400px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 24px;
 }
 
 /* Product Section */
@@ -1344,11 +1344,11 @@
 }
 
 @media (max-width: 640px) {
-  /* Completely Remove ALL Top Space */
+  /* Match About Page Layout - Background & Padding */
   .product-detail-page-new {
     padding: 0 !important;
     margin: 0 !important;
-    background-color: #ffffff;
+    background-color: #DDD9C3;
   }
 
   /* Force remove any top spacing from all children */
@@ -1358,8 +1358,9 @@
   }
 
   .container-new {
-    padding: 0 !important;
-    margin: 0 !important;
+    padding: 0 12px !important;
+    margin: 0 auto !important;
+    max-width: 100%;
   }
 
   /* Hide Breadcrumbs Completely */
@@ -1399,17 +1400,17 @@
   }
 
   .main-image-card-new {
-    padding: 30px 20px 35px;
+    padding: 30px 12px 35px;
     min-height: 400px;
-    border-radius: 0;
+    border-radius: 0 0 20px 20px;
     background: linear-gradient(180deg, #e8f5ef 0%, #d4f1e3 100%);
     position: relative;
     border: none;
-    margin: 0 !important;
+    margin: 0 0 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: none;
+    box-shadow: 0 4px 12px rgba(10, 58, 50, 0.08);
   }
 
   .badge-authentic {
@@ -1565,20 +1566,23 @@
     border-radius: 4px;
   }
 
-  /* Horizontal Thumbnail Gallery - NON-STICKY, Scrolls Normally */
+  /* Horizontal Thumbnail Gallery - Matches Page Theme */
   .horizontal-thumb-gallery {
     display: flex;
     gap: 10px;
-    padding: 12px 16px;
-    margin: 0;
-    background: #ffffff;
+    padding: 12px;
+    margin: 0 12px 12px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
     order: 2;
     overflow-x: auto;
     overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    position: relative; /* NOT fixed or sticky */
+    position: relative;
+    box-shadow: 0 2px 8px rgba(10, 58, 50, 0.06);
   }
 
   .horizontal-thumb-gallery::-webkit-scrollbar {
@@ -1658,13 +1662,13 @@
     padding: 4px;
   }
 
-  /* Product Info Section - Fully Visible, No Overlap */
+  /* Product Info Section - Fully Visible, Matches About Page Style */
   .product-info-card-new {
-    padding: 18px 16px 40px;
+    padding: 18px 12px 40px;
     background: #ffffff;
-    border-radius: 0;
-    margin: 0;
-    box-shadow: none;
+    border-radius: 12px;
+    margin: 12px;
+    box-shadow: 0 4px 12px rgba(10, 58, 50, 0.08);
     order: 3;
     position: relative;
     z-index: 1;
